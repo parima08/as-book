@@ -9,9 +9,10 @@
   --page: #e6e6e6;
   --gold-color: #bb965e;
   --dark-gold-color: #140f09;
-  --serif: "Libre Baskerville, serif";
+  --serif: "Libre Baskerville";
   --beige: #ddcda9;
   --dark-brown: #885830;
+  --sans-serif: "Raleway", "Open Sans";
 }
 
 * {
@@ -229,11 +230,16 @@ span.underline {
 }
 
 .as-content {
-  font-family: var(--serif);
+  font-family: var(--sans-serif) !important;
   color: var(--beige) !important;
   margin-left: 40%;
   width: 60%;
-  font-size: 3vh;
+  font-weight: 400;
+  font-size: 2.5vh;
+  padding-bottom: 10vh;
+}
+.as-content p {
+  margin: 5vh 0;
 }
 
 .header-image {
@@ -248,10 +254,6 @@ span.underline {
   background: url("img/gold-band-top.png") no-repeat;
   height: 40vh;
   background-size: cover;
-}
-
-.as-content p {
-  margin: 10vh 0;
 }
 
 .as-content h1,
@@ -376,4 +378,21 @@ span.underline {
   font-family: var(--serif);
   background: rgba(255, 255, 255, 0.2);
   color: var(--dark-gold-color);
+}
+
+h2.atmasiddhi-shastra {
+  letter-spacing: 1.7px;
+  font-family: var(--serif), serif;
+  background: -webkit-repeating-linear-gradient(
+    180deg,
+    var(--beige) 0%,
+    #a87b32 10%,
+    var(--beige) 33%,
+    #a87b32 61%,
+    var(--beige) 100%
+  );
+  font-size: 8vh;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
 }
