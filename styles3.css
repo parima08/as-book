@@ -12,7 +12,7 @@
   --serif: "Libre Baskerville";
   --beige: #ddcda9;
   --dark-brown: #885830;
-  --sans-serif: "Raleway", "Open Sans";
+  --sans-serif: "Open Sans", "Raleway";
 }
 
 * {
@@ -95,12 +95,13 @@ body {
 }
 
 h1.background-text {
-  font-size: 55vh;
+  font-size: 50vh;
   margin: 2vh;
   white-space: nowrap;
   font-weight: 200;
   color: white;
   opacity: 0.5;
+  align-self: flex-start;
 }
 
 h1.background-text.move-left {
@@ -240,6 +241,58 @@ span.underline {
 }
 .as-content p {
   margin: 5vh 0;
+}
+
+.cta {
+  height: 500px;
+
+  background: var(--beige);
+  text-align: center;
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta h3 {
+  font-family: var(--serif);
+  /* font-style: italic; */
+  color: var(--dark-brown);
+  font-weight: 800;
+  font-size: 4vh;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 2vw;
+  width: 80%;
+}
+
+.icon-container {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+}
+
+.icon-container img {
+  filter: sepia(100%);
+}
+
+.icon-container:hover img {
+  filter: sepia(0%);
+}
+
+.motif-container {
+  width: 150px;
+}
+
+.sepia {
+  filter: sepia(100%);
 }
 
 .header-image {
@@ -395,4 +448,19 @@ h2.atmasiddhi-shastra {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+}
+
+.as-hr {
+  width: 80%;
+  margin: 0 auto;
+  border: none;
+  height: 1px;
+  background: -webkit-repeating-linear-gradient(
+    180deg,
+    var(--beige) 0%,
+    #a87b32 10%,
+    var(--beige) 33%,
+    #a87b32 61%,
+    var(--beige) 100%
+  );
 }

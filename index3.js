@@ -133,6 +133,10 @@
     //imgContainerTimeline.to('.as-book-image-container', { scale: .5, duration: 1 });
 
     const imageTimeline = gsap.timeline();
+    const aboutAs = document.querySelector(".about-as");
+    const aboutAsStart = aboutAs.offsetTop;
+    const aboutAsHeight = aboutAs.scrollHeight * .65;
+    console.log({ aboutAs, aboutAsHeight });
     // const aboutTheAuthor = document.querySelector("#about-the-autor");
     // const aboutTheAuthorTop = aboutTheAuthor.top * .65;
     imageTimeline
@@ -140,7 +144,7 @@
             duration: 1,
             scrollTrigger: {
                 start: () => "top middle",
-                end: () => "4000",
+                end: () => aboutAsStart + aboutAsHeight - 60,
                 markers: true,
                 pin: '.as-book-img-container',
                 anticipatePin: 1,
@@ -167,36 +171,36 @@
                 markers: true,
             }
         })
-        .to(".second-image", {
-            opacity: 1,
-            scrollTrigger: {
-                trigger: ".about-as",
-                start: () => "bottom bottom",
-                end: () => "4500 bottom",
-                markers: true,
-                scrub: true,
-            }
-        })
-        .to(".first-image", {
-            opacity: 0,
-            scrollTrigger: {
-                trigger: ".about-as",
-                start: () => "bottom bottom",
-                end: () => "4500 bottom",
-                markers: true,
-                scrub: true,
-            }
-        })
-        .to(".about-as", {
-            backgroundColor: '#885830',
-            scrollTrigger: {
-                trigger: ".about-as",
-                start: () => "3500 bottom",
-                end: () => "bottom bottom",
-                markers: true,
-                scrub: true,
-            }
-        })
+    // .to(".second-image", {
+    //     opacity: 1,
+    //     scrollTrigger: {
+    //         trigger: ".about-as",
+    //         start: () => "bottom bottom",
+    //         end: () => "4500 bottom",
+    //         markers: true,
+    //         scrub: true,
+    //     }
+    // })
+    // .to(".first-image", {
+    //     opacity: 0,
+    //     scrollTrigger: {
+    //         trigger: ".about-as",
+    //         start: () => "bottom bottom",
+    //         end: () => "4500 bottom",
+    //         markers: true,
+    //         scrub: true,
+    //     }
+    // })
+    // .to(".about-as", {
+    //     backgroundColor: '#885830',
+    //     scrollTrigger: {
+    //         trigger: ".about-as",
+    //         start: () => "3500 bottom",
+    //         end: () => "bottom bottom",
+    //         markers: true,
+    //         scrub: true,
+    //     }
+    // })
 
 
     const width = 1500; //document.querySelector(".horizontal-scroll-window").scrollWidth * .65;
