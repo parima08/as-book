@@ -1,0 +1,264 @@
+:root {
+  --page-count: 20;
+  --page-scroll: 25;
+  --underline: rgba(64, 64, 64, 0.4);
+  --spine: #000;
+  --cover: #1a1a1a;
+  --bg: #4d4d4d;
+  --insert: #d9d9d9;
+  --page: #e6e6e6;
+  --gold-color: #bb965e;
+  --dark-gold-color: #140f09;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Raleway", serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+.web-container {
+  height: 500vh;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 1;
+  position: relative;
+}
+
+.introduction {
+  height: 300vh;
+  z-index: -1;
+  /* background: black; */
+  /* background: var(--gold-color); */
+  /* background: radial-gradient(
+        ellipse farthest-corner at right bottom,
+        #fedb37 0%,
+        #fdb931 8%,
+        #9f7928 30%,
+        #8a6e2f 40%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse farthest-corner at left top,
+        #ffffff 0%,
+        #ffffac 8%,
+        #d1b464 25%,
+        #5d4a1f 62.5%,
+        #5d4a1f 100%
+      ); */
+
+  /* background: -webkit-repeating-linear-gradient(
+      90deg,
+      #9f7928 0%,
+      #9f7928 30%,
+      #a87b32 10%,
+      #865c25 33%,
+      #e2b566 61%,
+      #9f7c3c 100%
+    ); */
+
+  background: -webkit-repeating-linear-gradient(
+    90deg,
+    #9f7928 0%,
+    #a87b32 10%,
+    #865c25 33%,
+    #a87b32 61%,
+    #9f7928 100%
+  );
+  overflow-x: hidden;
+}
+
+.introduction {
+  /* background: black; */
+  /* color: var(--dark-gold-color); */
+}
+
+.big-font-container {
+  overflow-x: hidden;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.big-font-camera {
+  margin-top: -16vh;
+}
+
+h1.background-text {
+  font-size: 55vh;
+  margin: 2vh;
+  white-space: nowrap;
+  font-weight: 200;
+  color: white;
+  opacity: 0.5;
+}
+
+h1.background-text.move-left {
+  align-self: flex-end;
+  direction: rtl;
+}
+
+.headers {
+  position: fixed;
+  color: var(--dark-gold-color);
+  /* color: white; */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 20vh 10vh;
+  font-family: "Hina Micho";
+  letter-spacing: 0.05em;
+}
+
+.headers h2.intro-header {
+  font-weight: 400;
+  font-size: 6.5vh;
+  max-width: 33vw;
+  padding: 10px;
+  opacity: 0;
+}
+
+h2.intro-header.first {
+  text-align: left;
+}
+h2.intro-header.second {
+  text-align: center;
+  opacity: 0;
+}
+
+h2.intro-header.third {
+  text-align: right;
+  opacity: 0;
+}
+
+h2.intro-header.active {
+  align-self: center;
+  opacity: 1;
+}
+
+span.underline {
+  text-decoration: underline;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.black-div {
+  height: 100vh;
+  background: black;
+}
+.about-the-book {
+  height: 100vh;
+  background: white;
+}
+
+.about-the-author {
+  /* background: white; */
+  background: black;
+  height: 100vh;
+}
+
+.testimonials {
+  height: 100vh;
+  background: white;
+}
+
+.six-fundas {
+  background: black;
+  display: flex;
+}
+
+.events {
+  height: 100vh;
+}
+
+.quotes {
+  height: 100vh;
+  background: black;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+}
+
+.container {
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  font-family: "Hina Micho";
+  color: rgb(200, 200, 200);
+  height: 100%;
+}
+
+.container-header {
+  font-weight: 400;
+  font-family: "Raleway";
+  font-size: 12vh;
+  color: var(--gold-color);
+}
+
+.callout {
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  font-size: 5vh;
+  width: 80%;
+  font-family: "Hina Micho";
+  padding: 20px;
+}
+
+.left-border {
+  border-left: 10px solid var(--gold-color);
+}
+
+.right-border {
+  border-right: 10px solid var(--gold-color);
+  text-align: right;
+}
+
+.additional-text {
+  font-size: 3vh;
+}
+
+.horizontal-scroll-container {
+  margin-top: 15vh;
+  width: 100%;
+  height: 50vh;
+  overflow-x: hidden;
+  /* border: 1px solid red; */
+}
+
+.horizontal-scroll-window {
+  width: calc(40vw * 6);
+  height: 100%;
+  display: flex;
+  /* background: blue; */
+}
+
+.funda-card {
+  width: 40vw;
+  /* border: 1px solid green; */
+  height: 100%;
+  padding: 40px;
+  display: flex;
+}
+
+.funda-card-content {
+  border: 2px solid var(--gold-color);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  font-family: "Raleway";
+  text-align: center;
+}
+
+.funda-card-content p.title {
+  font-size: 3vw;
+}
