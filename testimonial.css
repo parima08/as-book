@@ -225,4 +225,14 @@
     font-size: 22em;
     right: -25px;
   }
+  .test-img {
+    max-width: unset!important;
+  }
+  .slick-slide{
+padding:0 40px;
+  }
+  .quote-card {
+    max-width: unset;
+    width: 100%;
+  }
 }

@@ -646,3 +646,57 @@ h2.atmasiddhi-shastra {
   background: var(--beige);
   color: var(--dark-gold-color);
 }
+@media only screen and (max-width: 768px) {
+  .cta {
+    height: auto;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .icon-container {
+    height: 130px;
+  }
+  .testimonials {
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .test-slide {
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pkd-description{
+    padding-left:20px;
+    padding-right: 20px;
+  }
+  .pkd {
+    min-height: 2340px;
+    background: rgb(0, 0, 0);
+}
+.about-the-author-image{
+  height: 300px;
+  background-position-x: 103px;
+}
+.abt-author .row .column.column-50{
+   flex: unset!important;
+   max-width: unset!important;
+}
+.abt-author .row .column.column-offset-50 {
+  margin-left: 0%!important;
+}
+.abt-author{
+  padding: 20px!important;
+}
+.about-the-author .container-header{
+  font-size: x-large;
+  padding-top: 100px;
+}
+.about-bapa-text{
+  font-size: small;
+  padding: 0px;
+}
+}

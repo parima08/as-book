@@ -429,6 +429,8 @@
             pin: '.about-the-author',
             start: 'top middle',
             anticipatePin: 1,
+
+            
             end: () => `+=${scrollFactor * 8}`,
         }
     })
@@ -444,8 +446,23 @@
             end: () => `+=${scrollFactor * 8}`,
         }
     })
+    if (document.documentElement.clientWidth < 768) {
+        to('.about-the-author-image', {
+            //background: 'blue',
+            
+            "clip-path": "circle(25% at 50% 40%)",
+            scrollTrigger: {
+                start: aboutAuthorTop,
+                end: aboutAuthorTop + (scrollFactor * 1),
+                scrub: true,
+                markers: true,
+            }
+    })
+}
+    else{
     to('.about-the-author-image', {
         //background: 'blue',
+        
         "clip-path": "circle(25% at 25% 40%)",
         scrollTrigger: {
             start: aboutAuthorTop,
@@ -454,6 +471,7 @@
             markers: true,
         }
     })
+}
 
     to('.bapa .container', {
         opacity: 1,
