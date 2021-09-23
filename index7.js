@@ -265,22 +265,7 @@
     console.log(width);
 
 
-    //const innerWidth = 1000;
-    gsap.to(".horizontal-scroll-window", {
-        xPercent: -80,
-        x: () => -200,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".horizontal-scroll-container",
-            start: "bottom bottom",
-            end: () => 10000,
-            scrub: true,
-            markers: true,
-            pin: '.six-fundas',
-            invalidateOnRefresh: true,
-            anticipatePin: 1,
-        }
-    });
+
 
     // const testimonialTimeline = gsap.timeline();
 
@@ -308,7 +293,7 @@
     // })
 
     // to('.as-content .as-content-one', {
-    //     color: 'white',
+    //     color: '#bb965e',
     //     scrollTrigger: {
     //         trigger: ".as-content",
     //         scrub: 1,
@@ -346,5 +331,159 @@
     //         start: () => ""
     //     }
     // })
+
+    const pkdContentHeight = document.querySelector('.pkd').scrollHeight;
+    const pkdContentOffsetTop = document.querySelector('.pkd').offsetTop;
+    const pkdTimeLine = gsap.timeline();
+
+    const scrollFactor = 200;
+
+    pkdTimeLine
+        .to('.pkd-content', {
+            scrollTrigger: {
+                pin: '.pkd-content',
+                start: 'top middle',
+                anticipatePin: 1,
+                end: () => `+=${scrollFactor * 8}`,
+            }
+        })
+        .to(".pull-out-quote .line1", {
+            opacity: 1,
+            color: "#bb965e",
+            scrollTrigger: {
+                start: pkdContentOffsetTop,
+                end: pkdContentOffsetTop + (scrollFactor * 1),
+                scrub: true,
+                markers: true,
+            }
+        })
+        .to(".pull-out-quote .line2", {
+            opacity: 1,
+            color: "#bb965e",
+            scrollTrigger: {
+                start: pkdContentOffsetTop + (scrollFactor * 1),
+                end: pkdContentOffsetTop + (scrollFactor * 2),
+                scrub: true,
+                markers: true,
+            }
+        })
+        .to(".pull-out-quote .line3", {
+            opacity: 1,
+            color: "#bb965e",
+            scrollTrigger: {
+                start: pkdContentOffsetTop + (scrollFactor * 2),
+                end: pkdContentOffsetTop + (scrollFactor * 3),
+                scrub: true,
+                markers: true,
+            }
+        })
+        .to(".pull-out-quote .line4", {
+            opacity: 1,
+            color: "#bb965e",
+            scrollTrigger: {
+                start: pkdContentOffsetTop + (scrollFactor * 3),
+                end: pkdContentOffsetTop + (scrollFactor * 4),
+                scrub: true,
+                markers: true,
+            }
+        })
+
+    to('.pkd-writing-image', {
+        scrollTrigger: {
+            scrub: 1,
+            start: () => pkdContentOffsetTop + (scrollFactor * 5),
+            end: () => pkdContentOffsetTop + (scrollFactor * 6)
+        },
+        scale: 1,
+        opacity: 1
+    });
+    to('.pull-out-quote', {
+        opacity: 0,
+        scrollTrigger: {
+            scrub: 1,
+            start: () => pkdContentOffsetTop + (scrollFactor * 6),
+            end: () => pkdContentOffsetTop + (scrollFactor * 7)
+        },
+    })
+    to('.pkd-description', {
+        scrollTrigger: {
+            scrub: 1,
+            start: () => pkdContentOffsetTop + (scrollFactor * 7),
+            end: () => pkdContentOffsetTop + (scrollFactor * 8)
+        },
+        opacity: 1
+    });
+    to('.pkd-content', {
+        scrollTrigger: {
+            trigger: '.pkd-content',
+            pin: '.pkd-content',
+            start: 'bottom bottom',
+            anticipatePin: 1,
+            end: () => `+=${scrollFactor * 8}`,
+        }
+    })
+
+
+    to('.about-the author', {
+        scrollTrigger: {
+            pin: '.about-the-author',
+            start: 'top middle',
+            anticipatePin: 1,
+            end: () => `+=${scrollFactor * 8}`,
+        }
+    })
+
+    const aboutAuthorTop = document.querySelector('.bapa').offsetTop;
+
+    to('.about-the-author', {
+
+        scrollTrigger: {
+            pin: '.about-the-author',
+            start: 'top top',
+            anticipatePin: 1,
+            end: () => `+=${scrollFactor * 8}`,
+        }
+    })
+    to('.about-the-author-image', {
+        //background: 'blue',
+        "clip-path": "circle(25% at 25% 40%)",
+        scrollTrigger: {
+            start: aboutAuthorTop,
+            end: aboutAuthorTop + (scrollFactor * 1),
+            scrub: true,
+            markers: true,
+        }
+    })
+
+    to('.bapa .container', {
+        opacity: 1,
+        yPercent: 25,
+        scrollTrigger: {
+            start: aboutAuthorTop + (scrollFactor * .5),
+            end: aboutAuthorTop + (scrollFactor * 1.5),
+            scrub: true,
+            markers: true,
+        }
+    })
+
+    //const innerWidth = 1000;
+
+
+    to(".horizontal-scroll-window", {
+        xPercent: -80,
+        x: () => -200,
+        ease: "none",
+        scrollTrigger: {
+            trigger: ".horizontal-scroll-container",
+            start: "bottom bottom",
+            end: () => 10000,
+            scrub: true,
+            markers: true,
+            pin: '.six-fundas',
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+        }
+    })
+
 
 })();
