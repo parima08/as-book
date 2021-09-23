@@ -1,53 +1,60 @@
 (function () {
 
-    var $allVideos = $("iframe[src^='//www.youtube.com']"),
+    // var $allVideos = $("iframe[src^='//www.youtube.com']"),
 
-        // The element that is fluid width
-        $fluidEl = $("body");
+    //     // The element that is fluid width
+    //     $fluidEl = $("body");
 
-    // Figure out and save aspect ratio for each video
-    $allVideos.each(function () {
+    // // Figure out and save aspect ratio for each video
+    // $allVideos.each(function () {
 
-        $(this)
-            .data('aspectRatio', this.height / this.width)
+    //     $(this)
+    //         .data('aspectRatio', this.height / this.width)
 
-            // and remove the hard coded width/height
-            .removeAttr('height')
-            .removeAttr('width');
+    //         // and remove the hard coded width/height
+    //         .removeAttr('height')
+    //         .removeAttr('width');
 
+    // });
+
+    // // When the window is resized
+    // $(window).resize(function () {
+
+    //     var newWidth = $fluidEl.width();
+
+    //     // Resize all videos according to their own aspect ratio
+    //     $allVideos.each(function () {
+
+    //         var $el = $(this);
+    //         $el
+    //             .width(newWidth)
+    //             .height(newWidth * $el.data('aspectRatio'));
+
+    //     });
+
+    //     // Kick off one resize to fix all videos on page load
+    // }).resize();
+
+    $('.slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        centerMode: true,
+        variableWidth: true,
+        draggable: false,
+        cssEase: 'linear'
     });
 
-    // When the window is resized
-    $(window).resize(function () {
+    var slickEnabled = true;
 
-        var newWidth = $fluidEl.width();
-
-        // Resize all videos according to their own aspect ratio
-        $allVideos.each(function () {
-
-            var $el = $(this);
-            $el
-                .width(newWidth)
-                .height(newWidth * $el.data('aspectRatio'));
-
-        });
-
-        // Kick off one resize to fix all videos on page load
-    }).resize();
-
-    // var swiper = new Swiper('.blog-slider', {
-    //     spaceBetween: 30,
-    //     effect: 'fade',
-    //     loop: true,
-    //     mousewheel: {
-    //         invert: false,
-    //     },
-    //     // autoHeight: true,
-    //     pagination: {
-    //         el: '.blog-slider__pagination',
-    //         clickable: true,
-    //     }
-    // });
+    // $('.slider')
+    //     .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    //         $('.slick-list').addClass('do-transition')
+    //     })
+    //     .on('afterChange', function () {
+    //         $('.slick-list').removeClass('do-transition')
+    //     });
 
     const {
         gsap,
@@ -185,16 +192,17 @@
     const imageTimeline = gsap.timeline();
     const aboutAs = document.querySelector(".about-as");
     const aboutAsStart = aboutAs.offsetTop;
-    const aboutAsHeight = aboutAs.scrollHeight * .65;
-    console.log({ aboutAs, aboutAsHeight });
+    const aboutAsHeight = aboutAs.scrollHeight;
+    const introRealHeight = introDiv.scrollHeight;
+    console.log(document.querySelector('.as-content').scrollHeight);
     // const aboutTheAuthor = document.querySelector("#about-the-autor");
     // const aboutTheAuthorTop = aboutTheAuthor.top * .65;
     imageTimeline
         .to('.as-book-img-container', {
             duration: 1,
             scrollTrigger: {
-                start: () => "top middle",
-                end: () => aboutAsStart + aboutAsHeight - 60,
+                start: () => "middle -20%",
+                end: () => `+=${document.querySelector('.as-content').scrollHeight}`,
                 markers: true,
                 pin: '.as-book-img-container',
                 anticipatePin: 1,
@@ -206,7 +214,7 @@
             scrollTrigger: {
                 trigger: ".about-as",
                 scrub: 1,
-                start: () => "top middle",
+                start: () => "middle -40%",
                 end: () => 200,
                 markers: true,
             }
