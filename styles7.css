@@ -133,15 +133,15 @@ h1.background-text.move-left {
   display: flex;
   align-items: flex-end;
   padding: 20vh 10vh;
-  font-family: var(--sans-serif);
+  font-family: "Poopins", var(--sans-serif);
   /* z-index: 10; */
 }
 
 .headers h2.intro-header {
-  font-weight: 400;
-  font-size: 5em;
+  font-weight: 500;
+  font-size: 6.5em;
   letter-spacing: 0.05em;
-  max-width: 33vw;
+  max-width: 40%;
   padding: 10px;
   opacity: 0;
   text-align: center;
@@ -461,7 +461,7 @@ span.underline {
 
 .container-header {
   font-weight: 400;
-  font-family: "Raleway";
+  font-family: var(--sans-serif);
   font-size: 12vh;
   color: var(--gold-color);
 }
@@ -471,7 +471,7 @@ span.underline {
   margin-bottom: 8vh;
   font-size: 5vh;
   width: 80%;
-  font-family: "Hina Micho";
+  font-family: var(--serif);
   padding: 20px;
 }
 
@@ -779,8 +779,8 @@ h2.atmasiddhi-shastra {
 }
 
 .about-the-author {
-  background: var(--beige);
-  background: url("img/patterns/vintage-concrete.png") repeat;
+  background: rgba(255, 255, 255, 0.1);
+  /*background: url("img/patterns/vintage-concrete.png") repeat;*/
   height: 900px;
   /* background: url(img/bapa-writing/bapa-horizontal.png) no-repeat;
   background-size: cover;
