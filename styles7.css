@@ -293,7 +293,7 @@ span.underline {
   align-self: center;
   justify-self: center;
   width: 40%;
-  max-width: 500px;
+  max-width: 600px;
   grid-area: 1 / 1 / 4 / 2;
   z-index: 0;
   /* display: none; */
@@ -566,6 +566,24 @@ h2.atmasiddhi-shastra {
   text-align: center;
 }
 
+h2.title {
+  letter-spacing: 1.3px;
+  font-family: var(--serif), serif;
+  background: -webkit-repeating-linear-gradient(
+    180deg,
+    var(--dark-brown) 0%,
+    #a87b32 10%,
+    var(--beige) 33%,
+    var(--dark-brown) 61%,
+    var(--beige) 80%,
+    var(--dark-brown) 100%
+  );
+  font-size: 4em;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
 .as-text p {
   font-size: 1.6em;
   font-family: var(--sans-serif);
@@ -582,6 +600,8 @@ h2.atmasiddhi-shastra {
   margin: 0 auto;
   border: none;
   height: 3px;
+  padding-bottom: 2px;
+  margin-bottom: 2em;
   background: -webkit-repeating-linear-gradient(
     180deg,
     var(--beige) 0%,
@@ -702,16 +722,15 @@ h2.atmasiddhi-shastra {
 }
 
 .pull-out-quote {
-  font-size: 1.7em;
+  font-size: 3em;
   line-height: 1.5em;
   text-align: center;
   width: 60%;
   font-family: Georgia, var(--serif);
   font-weight: 400;
-  /* position: absolute; */
   margin: 0 auto;
   display: block;
-  padding-top: 10vh;
+  /* padding-top: 10vh; */
 }
 
 .pull-out-quote p.line4 {
@@ -722,7 +741,80 @@ h2.atmasiddhi-shastra {
 .line2,
 .line3,
 .line4 {
-  opacity: 0.2;
+  opacity: 1;
+}
+
+.pkd-2 {
+  position: relative;
+  /* height: 100vh; */
+  background: white;
+  padding: 10em;
+}
+
+.pkd-2 .container {
+  padding-top: 10em;
+}
+
+.pkd-2 .container .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pkd-2 p {
+  font-family: var(--sans-serif);
+  font-size: 1.9em;
+  letter-spacing: -0.01em;
+  text-align: justify;
+  color: var(--dark-gold-color);
+}
+
+.pkd-2 .pre-order-row {
+  padding: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-container {
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a.pre-order {
+  background-color: transparent;
+  border: 1px solid var(--dark-gold-color);
+  width: auto;
+  padding: 1em 2em;
+  color: var(--dark-gold-color);
+  text-align: center;
+  font-size: 1.6em;
+  font-family: var(--serif);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.pre-order:hover {
+  color: white;
+  background-color: var(--dark-gold-color);
+}
+
+.quote {
+  /* background: url(img/patterns/floor-tile.png) repeat; */
+  background: url(img/gold-band-bottom.png) no-repeat;
+  background-size: cover;
+  padding: 10em;
+  position: relative;
+}
+
+.quote p {
+  text-align: center;
+  font-size: 4em;
+  font-family: var(--serif);
+  color: var(--beige);
 }
 
 .pkd {
@@ -780,6 +872,10 @@ h2.atmasiddhi-shastra {
 
 .about-the-author {
   background: rgba(255, 255, 255, 0.1);
+  background: url(img/bapa-writing/bapa-horizontal.png) no-repeat;
+  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.9);
+  background-size: cover;
+  background-position: bottom left;
   /*background: url("img/patterns/vintage-concrete.png") repeat;*/
   height: 900px;
   /* background: url(img/bapa-writing/bapa-horizontal.png) no-repeat;
@@ -794,7 +890,7 @@ h2.atmasiddhi-shastra {
 }
 
 .about-the-author-image {
-  background: url(img/bapa-writing/bapa-horizontal.png) no-repeat;
+  background: url(img/bapa-writing/bapa-horizontal.png);
   background-size: cover;
   background-position: bottom left;
   height: 900px;

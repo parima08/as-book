@@ -346,90 +346,90 @@
 
     const scrollFactor = 200;
 
-    pkdTimeLine
-        .to('.pkd-content', {
-            scrollTrigger: {
-                pin: '.pkd-content',
-                start: 'top middle',
-                anticipatePin: 1,
-                end: () => `+=${scrollFactor * 8}`,
-            }
-        })
-        .to(".pull-out-quote .line1", {
-            opacity: 1,
-            color: "#bb965e",
-            scrollTrigger: {
-                start: pkdContentOffsetTop,
-                end: pkdContentOffsetTop + (scrollFactor * 1),
-                scrub: true,
-                markers: true,
-            }
-        })
-        .to(".pull-out-quote .line2", {
-            opacity: 1,
-            color: "#bb965e",
-            scrollTrigger: {
-                start: pkdContentOffsetTop + (scrollFactor * 1),
-                end: pkdContentOffsetTop + (scrollFactor * 2),
-                scrub: true,
-                markers: true,
-            }
-        })
-        .to(".pull-out-quote .line3", {
-            opacity: 1,
-            color: "#bb965e",
-            scrollTrigger: {
-                start: pkdContentOffsetTop + (scrollFactor * 2),
-                end: pkdContentOffsetTop + (scrollFactor * 3),
-                scrub: true,
-                markers: true,
-            }
-        })
-        .to(".pull-out-quote .line4", {
-            opacity: 1,
-            color: "#bb965e",
-            scrollTrigger: {
-                start: pkdContentOffsetTop + (scrollFactor * 3),
-                end: pkdContentOffsetTop + (scrollFactor * 4),
-                scrub: true,
-                markers: true,
-            }
-        })
+    // pkdTimeLine
+    //     .to('.pkd-content', {
+    //         scrollTrigger: {
+    //             pin: '.pkd-content',
+    //             start: 'top middle',
+    //             anticipatePin: 1,
+    //             end: () => `+=${scrollFactor * 8}`,
+    //         }
+    //     })
+    //     .to(".pull-out-quote .line1", {
+    //         opacity: 1,
+    //         color: "#bb965e",
+    //         scrollTrigger: {
+    //             start: pkdContentOffsetTop,
+    //             end: pkdContentOffsetTop + (scrollFactor * 1),
+    //             scrub: true,
+    //             markers: true,
+    //         }
+    //     })
+    //     .to(".pull-out-quote .line2", {
+    //         opacity: 1,
+    //         color: "#bb965e",
+    //         scrollTrigger: {
+    //             start: pkdContentOffsetTop + (scrollFactor * 1),
+    //             end: pkdContentOffsetTop + (scrollFactor * 2),
+    //             scrub: true,
+    //             markers: true,
+    //         }
+    //     })
+    //     .to(".pull-out-quote .line3", {
+    //         opacity: 1,
+    //         color: "#bb965e",
+    //         scrollTrigger: {
+    //             start: pkdContentOffsetTop + (scrollFactor * 2),
+    //             end: pkdContentOffsetTop + (scrollFactor * 3),
+    //             scrub: true,
+    //             markers: true,
+    //         }
+    //     })
+    //     .to(".pull-out-quote .line4", {
+    //         opacity: 1,
+    //         color: "#bb965e",
+    //         scrollTrigger: {
+    //             start: pkdContentOffsetTop + (scrollFactor * 3),
+    //             end: pkdContentOffsetTop + (scrollFactor * 4),
+    //             scrub: true,
+    //             markers: true,
+    //         }
+    //     })
 
-    to('.pkd-writing-image', {
-        scrollTrigger: {
-            scrub: 1,
-            start: () => pkdContentOffsetTop + (scrollFactor * 5),
-            end: () => pkdContentOffsetTop + (scrollFactor * 6)
-        },
-        scale: 1,
-        opacity: 1
-    });
-    to('.pull-out-quote', {
-        opacity: 0,
-        scrollTrigger: {
-            scrub: 1,
-            start: () => pkdContentOffsetTop + (scrollFactor * 6),
-            end: () => pkdContentOffsetTop + (scrollFactor * 7)
-        },
-    })
-    to('.pkd-description', {
-        scrollTrigger: {
-            scrub: 1,
-            start: () => pkdContentOffsetTop + (scrollFactor * 7),
-            end: () => pkdContentOffsetTop + (scrollFactor * 8)
-        },
-        opacity: 1
-    });
-    to('.pkd-content', {
-        scrollTrigger: {
-            trigger: '.pkd-content',
-            pin: '.pkd-content',
-            start: 'bottom bottom',
-            anticipatePin: 1,
-            end: () => `+=${scrollFactor * 8}`,
-        }
-    })
+    // to('.pkd-writing-image', {
+    //     scrollTrigger: {
+    //         scrub: 1,
+    //         start: () => pkdContentOffsetTop + (scrollFactor * 5),
+    //         end: () => pkdContentOffsetTop + (scrollFactor * 6)
+    //     },
+    //     scale: 1,
+    //     opacity: 1
+    // });
+    // to('.pull-out-quote', {
+    //     opacity: 0,
+    //     scrollTrigger: {
+    //         scrub: 1,
+    //         start: () => pkdContentOffsetTop + (scrollFactor * 6),
+    //         end: () => pkdContentOffsetTop + (scrollFactor * 7)
+    //     },
+    // })
+    // to('.pkd-description', {
+    //     scrollTrigger: {
+    //         scrub: 1,
+    //         start: () => pkdContentOffsetTop + (scrollFactor * 7),
+    //         end: () => pkdContentOffsetTop + (scrollFactor * 8)
+    //     },
+    //     opacity: 1
+    // });
+    // to('.pkd-content', {
+    //     scrollTrigger: {
+    //         trigger: '.pkd-content',
+    //         pin: '.pkd-content',
+    //         start: 'bottom bottom',
+    //         anticipatePin: 1,
+    //         end: () => `+=${scrollFactor * 8}`,
+    //     }
+    // })
 
 
     to('.about-the author', {
