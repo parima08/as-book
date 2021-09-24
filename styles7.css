@@ -333,12 +333,20 @@ span.underline {
   margin: 5vh 0;
 }
 
+.cta-top-band {
+  background: url(img/long-band-up.png) repeat;
+  background-size: contain;
+  height: 100px;
+  width: 100vw;
+  margin-top: -250px;
+}
+
 .cta {
-  /* height: 500px; */
+  /* height: 00px; */
   background: var(--beige);
-  background: url(img/patterns/floor-tile.png) repeat;
-  /* background: url(img/long-band-up.png) no-repeat; */
-  /* background-size: cover; */
+  /* background: url(img/patterns/floor-tile.png) repeat; */
+  background: url(img/band-pattern.png) repeat;
+  background-size: contain;
   text-align: center;
   padding: 5vh;
   display: flex;
