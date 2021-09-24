@@ -48,14 +48,6 @@
 
     var slickEnabled = true;
 
-    // $('.slider')
-    //     .on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-    //         $('.slick-list').addClass('do-transition')
-    //     })
-    //     .on('afterChange', function () {
-    //         $('.slick-list').removeClass('do-transition')
-    //     });
-
     const {
         gsap,
         ScrollTrigger,
@@ -63,51 +55,13 @@
         window;
 
     gsap.registerPlugin(ScrollTrigger);
-    // window.onscroll = function (e) {
-    //     console.log(window.scrollY); // Value of scroll Y in px
-    // };
 
-    // console.log(window.innerHeight);
     const introDiv = document.querySelector(".introduction");
     const introHeight = introDiv.scrollHeight * .65;
 
     console.log(introHeight, window.innerHeight, window.scrollHeight, introDiv.innerHeight, introDiv.clientHeight);
 
-    to('.background-text.move-right', {
-        xPercent: -100,
-        scrollTrigger: {
-            scrub: 1,
-            start: () => 0,
-            end: () => introHeight,
-        }
-    });
 
-    to('.background-text.move-left', {
-        xPercent: 100,
-        scrollTrigger: {
-            scrub: 1,
-            start: () => 0,
-            end: () => introHeight,
-        }
-    });
-
-    // TEXT MOVEMENT:
-
-    // set('.intro-header.second', {
-    //     opacity: 0,
-    //     scrollTrigger: {
-    //         scrub: 1,
-    //         start: () => 0,
-    //         end: () => 0
-    //     }
-    // });
-
-    let onEnterIntroText = (divId) => {
-        $(`${divId}`).addClass('active');
-    }
-    let onLeaveIntroText = (divId) => {
-        $(`${divId}`).removeClass('active');
-    }
 
     const firstIntroHeaderTl = gsap.timeline(
         {
@@ -119,6 +73,53 @@
             }
         }
     );
+
+    const background = gsap.timeline();
+
+    to('.background-radiant', {
+        opacity: .8,
+        scrollTrigger: {
+            start: 1.5 * (introHeight / 6),
+            end: 3.5 * (introHeight / 6),
+            scrub: 1,
+        }
+    })
+    to('.background-radiant', {
+        // background: 'rgba(221, 205, 169, 1)',
+        // opacity: 1,
+        scale: 1.5,
+        opacity: 1,
+        scrollTrigger: {
+            start: 3.5 * (introHeight / 6),
+            end: introHeight,
+            scrub: 1,
+            immediateRender: false,
+        }
+    })
+
+    // set('.background-radiant', {
+    //     scale: 1.5,
+    //     opacity: 1,
+    //     scrollTrigger: {
+    //         trigger: '.as-book-img-container',
+    //         start: introHeight,
+    //         end: "middle middle",
+    //         markers: true,
+    //         scrub: 1,
+    //     }
+    // })
+
+    to('.background-radiant', {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.as-book-img-container',
+            start: "middle middle",
+            end: "+=600",
+            markers: true,
+            scrub: 1,
+            immediateRender: false,
+        }
+    })
 
     firstIntroHeaderTl
         .to('.intro-header.first', { yPercent: 100, opacity: 0, duration: 1 })
@@ -190,55 +191,62 @@
     //imgContainerTimeline.to('.as-book-image-container', { scale: .5, duration: 1 });
 
     const imageTimeline = gsap.timeline();
-    const aboutAs = document.querySelector(".about-as");
-    const aboutAsStart = aboutAs.offsetTop;
-    const aboutAsHeight = aboutAs.scrollHeight;
-    const introRealHeight = introDiv.scrollHeight;
-    console.log(document.querySelector('.as-content').scrollHeight);
+    // const aboutAs = document.querySelector(".about-as");
+    // const aboutAsStart = aboutAs.offsetTop;
+    // const aboutAsHeight = aboutAs.scrollHeight;
+    // const introRealHeight = introDiv.scrollHeight; * .65
+    console.log(document.querySelector('.about-as-book-reveal').scrollHeight);
     // const aboutTheAuthor = document.querySelector("#about-the-autor");
     // const aboutTheAuthorTop = aboutTheAuthor.top * .65;
+
     imageTimeline
-        .to('.as-book-img-container', {
+        .to('.as-book-and-text', {
             duration: 1,
             scrollTrigger: {
-                start: () => "middle -20%",
-                end: () => `+=${document.querySelector('.as-content').scrollHeight}`,
+                trigger: '.as-book-and-text',
+                start: () => "center center",
+                endTrigger: '.about-as-book-reveal',
+                end: () => 'bottom bottom', //`+=${document.querySelector('.about-as-book-reveal').scrollHeight}`,
                 markers: true,
-                pin: '.as-book-img-container',
+                pin: '.as-book-and-text',
                 anticipatePin: 1,
             }
         })
         .to('.as-book-img-container', {
-            scale: .5,
+            scale: .8,
             duration: 1,
             scrollTrigger: {
-                trigger: ".about-as",
+                trigger: ".about-as-book-reveal",
                 scrub: 1,
-                start: () => "middle -40%",
-                end: () => 200,
+                start: () => "middle -10%",
+                end: () => "middle -20%",
                 markers: true,
             }
         }).to('.as-book-img-container', {
             xPercent: -50,
             duration: 1,
             scrollTrigger: {
-                trigger: ".about-as",
+                trigger: ".about-as-book-reveal",
                 scrub: 1,
-                start: () => "200 top",
-                end: () => 400,
+                start: () => "middle -20%",
+                end: () => "middle -30%",
                 markers: true,
             }
         })
-    // .to(".second-image", {
-    //     opacity: 1,
-    //     scrollTrigger: {
-    //         trigger: ".about-as",
-    //         start: () => "bottom bottom",
-    //         end: () => "4500 bottom",
-    //         markers: true,
-    //         scrub: true,
-    //     }
-    // })
+
+        .to('.as-text', {
+            xPercent: 50,
+            duration: 1,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".about-as-book-reveal",
+                scrub: 1,
+                start: () => "middle -20%",
+                end: () => "middle -30%",
+                markers: true,
+            }
+        })
+
     // .to(".first-image", {
     //     opacity: 0,
     //     scrollTrigger: {
@@ -430,7 +438,7 @@
             start: 'top middle',
             anticipatePin: 1,
 
-            
+
             end: () => `+=${scrollFactor * 8}`,
         }
     })
@@ -449,7 +457,7 @@
     if (document.documentElement.clientWidth < 768) {
         to('.about-the-author-image', {
             //background: 'blue',
-            
+
             "clip-path": "circle(25% at 50% 40%)",
             scrollTrigger: {
                 start: aboutAuthorTop,
@@ -457,21 +465,21 @@
                 scrub: true,
                 markers: true,
             }
-    })
-}
-    else{
-    to('.about-the-author-image', {
-        //background: 'blue',
-        
-        "clip-path": "circle(25% at 25% 40%)",
-        scrollTrigger: {
-            start: aboutAuthorTop,
-            end: aboutAuthorTop + (scrollFactor * 1),
-            scrub: true,
-            markers: true,
-        }
-    })
-}
+        })
+    }
+    else {
+        to('.about-the-author-image', {
+            //background: 'blue',
+
+            "clip-path": "circle(25% at 25% 40%)",
+            scrollTrigger: {
+                start: aboutAuthorTop,
+                end: aboutAuthorTop + (scrollFactor * 1),
+                scrub: true,
+                markers: true,
+            }
+        })
+    }
 
     to('.bapa .container', {
         opacity: 1,
