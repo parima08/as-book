@@ -82,7 +82,7 @@ body {
   width: 100vw;
   top: 0;
   background: radial-gradient(
-    circle,
+    circle at center bottom,
     rgba(221, 205, 169, 1) 0%,
     rgba(47, 36, 26, 1) 60%,
     rgba(0, 0, 0, 1) 100%
@@ -128,20 +128,19 @@ h1.background-text.move-left {
 .headers {
   position: fixed;
   /* color: var(--dark-gold-color); */
-  color: white;
   height: 100%;
   width: 100%;
   display: flex;
   align-items: flex-end;
   padding: 20vh 10vh;
-  font-family: "Libre Baskerville, serif";
-  letter-spacing: 0.05em;
+  font-family: var(--sans-serif);
   z-index: 10;
 }
 
 .headers h2.intro-header {
   font-weight: 400;
-  font-size: 6.5vh;
+  font-size: 5em;
+  letter-spacing: 0.05em;
   max-width: 33vw;
   padding: 10px;
   opacity: 0;
@@ -152,6 +151,18 @@ h1.background-text.move-left {
   left: 0;
   right: 0;
   text-align: center;
+  /* background: -webkit-repeating-linear-gradient(
+    90deg,
+    #9f7928 0%,
+    #a87b32 10%,
+    #865c25 33%,
+    #a87b32 61%,
+    #9f7928 100%
+  ); */
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+
+  text-shadow: -1px -1px 1px var(--beige), 1px 1px 1px #000;
 }
 
 h2.intro-header.first {
@@ -159,16 +170,19 @@ h2.intro-header.first {
   transform: translateY(-50%);
   margin: auto;
   opacity: 1;
+  color: var(--dark-gold-color);
   /* text-align: left; */
 }
 h2.intro-header.second {
   /* text-align: center; */
   opacity: 0;
+  color: var(--dark-brown);
 }
 
 h2.intro-header.third {
   /* text-align: right; */
   opacity: 0;
+  color: var(--gold-color);
 }
 
 /* h2.intro-header.active {
@@ -240,7 +254,7 @@ span.underline {
 
 .as-book-img-container {
   align-self: top;
-  width: 60vh;
+  width: 70vh;
   margin: 0 auto;
 
   /* border: 1px solid var(--gold-color);

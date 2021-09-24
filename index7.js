@@ -77,7 +77,7 @@
     const background = gsap.timeline();
 
     to('.background-radiant', {
-        opacity: .8,
+        opacity: .3,
         scrollTrigger: {
             start: 1.5 * (introHeight / 6),
             end: 3.5 * (introHeight / 6),
@@ -114,7 +114,7 @@
         scrollTrigger: {
             trigger: '.as-book-img-container',
             start: "middle middle",
-            end: "+=600",
+            end: "+=300",
             markers: true,
             scrub: 1,
             immediateRender: false,
@@ -213,7 +213,7 @@
             }
         })
         .to('.as-book-img-container', {
-            scale: .8,
+            scale: .75,
             duration: 1,
             scrollTrigger: {
                 trigger: ".about-as-book-reveal",
