@@ -134,7 +134,7 @@ h1.background-text.move-left {
   align-items: flex-end;
   padding: 20vh 10vh;
   font-family: var(--sans-serif);
-  z-index: 10;
+  /* z-index: 10; */
 }
 
 .headers h2.intro-header {
@@ -334,17 +334,14 @@ span.underline {
 }
 
 .cta-top-band {
-  background: url(img/long-band-up.png) repeat;
-  background-size: contain;
+  background: url(img/long-band-up.png) repeat-y;
+  background-size: cover;
   height: 100px;
   width: 100vw;
-  margin-top: -250px;
+  margin-top: -20em;
 }
 
 .cta {
-  /* height: 00px; */
-  background: var(--beige);
-  /* background: url(img/patterns/floor-tile.png) repeat; */
   background: url(img/band-pattern.png) repeat;
   background-size: contain;
   text-align: center;
@@ -353,14 +350,17 @@ span.underline {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 100;
+  position: relative;
 }
 
 .cta h3 {
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   /* font-style: italic; */
-  color: var(--dark-brown);
-  font-weight: 800;
-  font-size: 4vh;
+  color: var(--dark-gold-color);
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 2.75em;
 }
 
 .icons {
@@ -368,7 +368,7 @@ span.underline {
   flex-direction: row;
   justify-content: space-around;
   padding-top: 2vw;
-  width: 80%;
+  max-width: 80%;
 }
 
 .icon-container {
@@ -377,23 +377,46 @@ span.underline {
   align-items: center;
   justify-content: center;
   padding: 1vw;
+  cursor: pointer;
 }
 
-.icon-container img {
+.icons .icon-container image {
+  width: 100%;
+}
+
+.icon-container.kindle {
+  border-left: 2px solid var(--dark-gold-color);
+  border-right: 2px solid var(--dark-gold-color);
+  width: 300px;
+}
+
+.icon-container .normal-icon {
+  display: none;
+}
+
+.icon-container:hover .brown-icon {
+  display: none;
+}
+
+.icon-container:hover .normal-icon {
+  display: block;
+}
+
+/* .icon-container img {
   filter: sepia(100%);
 }
 
 .icon-container:hover img {
   filter: sepia(0%);
-}
+} */
 
 .motif-container {
   width: 150px;
 }
 
-.sepia {
+/* .sepia {
   filter: sepia(100%);
-}
+} */
 
 .header-image {
   width: 100vw;

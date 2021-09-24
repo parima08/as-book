@@ -213,7 +213,7 @@
             }
         })
         .to('.as-book-img-container', {
-            scale: .75,
+            scale: .8,
             duration: 1,
             scrollTrigger: {
                 trigger: ".about-as-book-reveal",
