@@ -337,7 +337,8 @@ span.bold {
 }
 
 .cta-top-band {
-  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/long-band-up.png) repeat-y;
+  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/long-band-up.png)
+    repeat-y;
   background-size: cover;
   height: 100px;
   width: 100vw;
@@ -345,7 +346,8 @@ span.bold {
 }
 
 .cta {
-  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/band-pattern.png) repeat;
+  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/band-pattern.png)
+    repeat;
   background-size: contain;
   text-align: center;
   padding: 5vh;
@@ -423,14 +425,16 @@ span.bold {
 
 .header-image {
   width: 100vw;
-  background: url("https://d3p9vfk770tq8e.cloudfront.net/img/small-band.png") no-repeat;
+  background: url("https://d3p9vfk770tq8e.cloudfront.net/img/small-band.png")
+    no-repeat;
   height: 40vh;
   background-size: cover;
 }
 
 .header-image-gold {
   width: 100vw;
-  background: url("https://d3p9vfk770tq8e.cloudfront.net/img/gold-band-top.png") no-repeat;
+  background: url("https://d3p9vfk770tq8e.cloudfront.net/img/gold-band-top.png")
+    no-repeat;
   height: 40vh;
   background-size: cover;
 }
@@ -816,7 +820,8 @@ a.pre-order-light:hover {
 
 .quote {
   /* background: url(d3p9vfk770tq8e.cloudfront.net/img/patterns/floor-tile.png) repeat; */
-  background: url(d3p9vfk770tq8e.cloudfront.net/img/gold-band.png) no-repeat;
+  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/gold-band.png)
+    no-repeat;
   background-size: cover;
   padding: 10em;
   position: relative;
@@ -884,7 +889,8 @@ a.pre-order-light:hover {
 
 .about-the-author {
   background: rgba(255, 255, 255, 0.1);
-  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/bapa-writing/bapa-horizontal.jpg) no-repeat;
+  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/bapa-writing/bapa-horizontal.jpg)
+    no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.9);
   background-size: cover;
   background-position: bottom left;
@@ -902,7 +908,7 @@ a.pre-order-light:hover {
 }
 
 .about-the-author-image {
-  background: url(d3p9vfk770tq8e.cloudfront.net/img/bapa-writing/bapa-horizontal.jpg);
+  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/bapa-writing/bapa-horizontal.jpg);
   background-size: cover;
   background-position: bottom left;
   height: 100vh;
