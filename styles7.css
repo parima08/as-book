@@ -542,11 +542,12 @@ span.underline {
 }
 
 .about-bapa-text {
-  font-size: 2vh;
+  font-size: 1.9em;
   padding: 2vh;
-  font-family: var(--serif);
+  font-family: var(--sans-serif);
   /* background: rgba(255, 255, 255, 0.2); */
-  color: var(--dark-gold-color);
+  color: rgba(80, 54, 31, 1);
+  text-align: center;
 }
 
 h2.atmasiddhi-shastra {
@@ -569,14 +570,12 @@ h2.atmasiddhi-shastra {
 h2.title {
   letter-spacing: 1.3px;
   font-family: var(--serif), serif;
-  background: -webkit-repeating-linear-gradient(
-    180deg,
-    var(--dark-brown) 0%,
-    #a87b32 10%,
-    var(--beige) 33%,
-    var(--dark-brown) 61%,
-    var(--beige) 80%,
-    var(--dark-brown) 100%
+  background: radial-gradient(
+    circle,
+    var(--gold-color) 0%,
+    var(--beige) 50%,
+    var(--dark-brown) 70%,
+    var(--dark-gold-color) 100%
   );
   font-size: 4em;
   -webkit-background-clip: text;
@@ -804,7 +803,7 @@ a.pre-order:hover {
 
 .quote {
   /* background: url(img/patterns/floor-tile.png) repeat; */
-  background: url(img/gold-band-bottom.png) no-repeat;
+  background: url(img/gold-band.png) no-repeat;
   background-size: cover;
   padding: 10em;
   position: relative;
@@ -814,7 +813,6 @@ a.pre-order:hover {
   text-align: center;
   font-size: 4em;
   font-family: var(--serif);
-  color: var(--beige);
 }
 
 .pkd {
@@ -867,17 +865,18 @@ a.pre-order:hover {
 }
 
 .bapa {
-  height: 300vh;
+  height: 150vh;
+  position: relative;
 }
 
 .about-the-author {
   background: rgba(255, 255, 255, 0.1);
-  background: url(img/bapa-writing/bapa-horizontal.png) no-repeat;
+  background: url(img/bapa-writing/bapa-horizontal.jpg) no-repeat;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.9);
   background-size: cover;
   background-position: bottom left;
   /*background: url("img/patterns/vintage-concrete.png") repeat;*/
-  height: 900px;
+  height: 100vh;
   /* background: url(img/bapa-writing/bapa-horizontal.png) no-repeat;
   background-size: cover;
   background-position: bottom left;
@@ -890,10 +889,10 @@ a.pre-order:hover {
 }
 
 .about-the-author-image {
-  background: url(img/bapa-writing/bapa-horizontal.png);
+  background: url(img/bapa-writing/bapa-horizontal.jpg);
   background-size: cover;
   background-position: bottom left;
-  height: 900px;
+  height: 100vh;
   width: 100%;
   position: absolute;
   clip-path: circle(100%);

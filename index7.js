@@ -269,8 +269,8 @@
     // })
 
 
-    const width = 1500; //document.querySelector(".horizontal-scroll-window").scrollWidth * .65;
-    console.log(width);
+    // const width = 1500; //document.querySelector(".horizontal-scroll-window").scrollWidth * .65;
+    // console.log(width);
 
 
 
@@ -340,61 +340,13 @@
     //     }
     // })
 
-    const pkdContentHeight = document.querySelector('.pkd').scrollHeight;
-    const pkdContentOffsetTop = document.querySelector('.pkd').offsetTop;
+    // const pkdContentHeight = document.querySelector('.pkd').scrollHeight;
+    // const pkdContentOffsetTop = document.querySelector('.pkd').offsetTop;
     const pkdTimeLine = gsap.timeline();
 
-    const scrollFactor = 200;
 
-    // pkdTimeLine
-    //     .to('.pkd-content', {
-    //         scrollTrigger: {
-    //             pin: '.pkd-content',
-    //             start: 'top middle',
-    //             anticipatePin: 1,
-    //             end: () => `+=${scrollFactor * 8}`,
-    //         }
-    //     })
-    //     .to(".pull-out-quote .line1", {
-    //         opacity: 1,
-    //         color: "#bb965e",
-    //         scrollTrigger: {
-    //             start: pkdContentOffsetTop,
-    //             end: pkdContentOffsetTop + (scrollFactor * 1),
-    //             scrub: true,
-    //             markers: true,
-    //         }
-    //     })
-    //     .to(".pull-out-quote .line2", {
-    //         opacity: 1,
-    //         color: "#bb965e",
-    //         scrollTrigger: {
-    //             start: pkdContentOffsetTop + (scrollFactor * 1),
-    //             end: pkdContentOffsetTop + (scrollFactor * 2),
-    //             scrub: true,
-    //             markers: true,
-    //         }
-    //     })
-    //     .to(".pull-out-quote .line3", {
-    //         opacity: 1,
-    //         color: "#bb965e",
-    //         scrollTrigger: {
-    //             start: pkdContentOffsetTop + (scrollFactor * 2),
-    //             end: pkdContentOffsetTop + (scrollFactor * 3),
-    //             scrub: true,
-    //             markers: true,
-    //         }
-    //     })
-    //     .to(".pull-out-quote .line4", {
-    //         opacity: 1,
-    //         color: "#bb965e",
-    //         scrollTrigger: {
-    //             start: pkdContentOffsetTop + (scrollFactor * 3),
-    //             end: pkdContentOffsetTop + (scrollFactor * 4),
-    //             scrub: true,
-    //             markers: true,
-    //         }
-    //     })
+
+
 
     // to('.pkd-writing-image', {
     //     scrollTrigger: {
@@ -432,26 +384,115 @@
     // })
 
 
-    to('.about-the author', {
+
+
+    // to('.about-the-author', {
+    //     scrollTrigger: {
+    //         trigger: '.about-the-author',
+    //         pin: '.about-the-author',
+    //         start: 'middle middle',
+    //         anticipatePin: 1,
+    //         end: () => `+=${scrollFactor * 8}`,
+    //     }
+    // })
+
+    to('.quote', {
         scrollTrigger: {
-            pin: '.about-the-author',
-            start: 'top middle',
+            pin: ".quote",
+            trigger: '.quote',
+            markers: true,
+            start: "center center",
+            end: "+=400",
             anticipatePin: 1,
-
-
-            end: () => `+=${scrollFactor * 8}`,
+            immediateRender: false,
         }
     })
 
-    const aboutAuthorTop = document.querySelector('.bapa').offsetTop;
+    const beigeColor = "#ddcda9";
 
+    pkdTimeLine
+        .to(".pull-out-quote .line1", {
+            opacity: 1,
+            color: beigeColor,
+            scrollTrigger: {
+                trigger: '.quote',
+                markers: true,
+                start: "center center",
+                end: "+=100",
+                scrub: true,
+                markers: true,
+            }
+        })
+        .to(".pull-out-quote .line2", {
+            opacity: 1,
+            color: beigeColor,
+            scrollTrigger: {
+                trigger: '.quote',
+                markers: true,
+                start: "center center +=100",
+                end: "+=200",
+                scrub: true,
+                markers: true,
+            }
+        })
+        .to(".pull-out-quote .line3", {
+            opacity: 1,
+            color: beigeColor,
+            scrollTrigger: {
+                trigger: '.quote',
+                markers: true,
+                start: "center center +=200",
+                end: "+=300",
+                scrub: true,
+                markers: true,
+            }
+        })
+        .to(".pull-out-quote .line4", {
+            opacity: 1,
+            color: beigeColor,
+            scrollTrigger: {
+                trigger: '.quote',
+                markers: true,
+                start: "center center +=300",
+                end: "+=400",
+                scrub: true,
+                markers: true,
+
+            }
+        })
+    // .to(".pull-out-quote .line3", {
+    //     opacity: 1,
+    //     color: "#bb965e",
+    //     scrollTrigger: {
+    //         start: pkdContentOffsetTop + (scrollFactor * 2),
+    //         end: pkdContentOffsetTop + (scrollFactor * 3),
+    //         scrub: true,
+    //         markers: true,
+    //     }
+    // })
+    // .to(".pull-out-quote .line4", {
+    //     opacity: 1,
+    //     color: "#bb965e",
+    //     scrollTrigger: {
+    //         start: pkdContentOffsetTop + (scrollFactor * 3),
+    //         end: pkdContentOffsetTop + (scrollFactor * 4),
+    //         scrub: true,
+    //         markers: true,
+    //     }
+    // })
+
+    const aboutAuthorTop = document.querySelector('.bapa').offsetTop;
+    const aboutAuthorTotalHeight = document.querySelector('.about-the-author').scrollHeight;
+    const scrollFactor = aboutAuthorTotalHeight / 3;
     to('.about-the-author', {
 
         scrollTrigger: {
             pin: '.about-the-author',
-            start: 'top top',
+            start: 'center center',
             anticipatePin: 1,
-            end: () => `+=${scrollFactor * 8}`,
+            markers: true,
+            end: () => `+=${aboutAuthorTotalHeight}`,
+            immediateRender: false,
         }
     })
     if (document.documentElement.clientWidth < 768) {
@@ -471,7 +512,7 @@
         to('.about-the-author-image', {
             //background: 'blue',
 
-            "clip-path": "circle(25% at 25% 40%)",
+            "clip-path": "circle(25% at 20% 50%)",
             scrollTrigger: {
                 start: aboutAuthorTop,
                 end: aboutAuthorTop + (scrollFactor * 1),
@@ -483,7 +524,7 @@
 
     to('.bapa .container', {
         opacity: 1,
-        yPercent: 25,
+        yPercent: 40,
         scrollTrigger: {
             start: aboutAuthorTop + (scrollFactor * .5),
             end: aboutAuthorTop + (scrollFactor * 1.5),
