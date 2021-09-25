@@ -42,7 +42,7 @@
 }
 
 .six-fundamental-background {
-  /* background: url(./d3p9vfk770tq8e.cloudfront.net/img/Landing\ Page.png); */
+  /* background: url(https://d3p9vfk770tq8e.cloudfront.net/img/Landing\ Page.png); */
   background: radial-gradient(
     circle,
     rgba(47, 36, 26, 1) 0%,
@@ -54,7 +54,7 @@
   padding: 50px 0px;
 }
 .golden-map-background {
-  background: url(./d3p9vfk770tq8e.cloudfront.net/img/golden-map.png);
+  background: url(https://d3p9vfk770tq8e.cloudfront.net/img/golden-map.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -168,7 +168,7 @@
   display: inline-block;
   height: 30px;
   min-width: 61px;
-  background-image: url(./d3p9vfk770tq8e.cloudfront.net/img/motif.png);
+  background-image: url(https://d3p9vfk770tq8e.cloudfront.net/img/motif.png);
   background-size: contain;
   background-repeat: round;
 }
