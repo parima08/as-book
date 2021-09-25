@@ -52,8 +52,10 @@
   background-position: center;
   background-size: contain;
   padding: 50px 0px;
+  position: relative;
 }
 .golden-map-background {
+  position: relative;
   background: url(https://d3p9vfk770tq8e.cloudfront.net/img/golden-map.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -201,5 +203,8 @@
   }
   .golden-map-background hr {
     width: 70%;
+  }
+  .six-funda-text {
+    width: 100%;
   }
 }

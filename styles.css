@@ -21,12 +21,18 @@
   box-sizing: border-box;
 }
 
+/* * {
+  outline: 1px solid #f00 !important;
+} */
+
 body {
   width: 100%;
   height: 100%;
   font-family: "Open Sans", serif;
   font-weight: 400;
   margin: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .web-container {
@@ -256,8 +262,8 @@ span.bold {
 }
 
 .as-book-img-container {
-  align-self: top;
   width: 70vh;
+  max-width: 100vw;
   margin: 0 auto;
 
   /* border: 1px solid var(--gold-color);
@@ -341,7 +347,8 @@ span.bold {
     repeat-y;
   background-size: cover;
   height: 100px;
-  width: 100vw;
+  /* width: 100vw; */
+  width: 100%;
   margin-top: -20em;
 }
 
@@ -696,9 +703,8 @@ h2.title {
   opacity: 0.4;
 }
 
-.video-container {
+/* .video-container {
   box-shadow: 0px 10px 40px 10px rgba(0, 0, 0, 0.2);
-  /* padding: 60px; */
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -711,7 +717,6 @@ h2.title {
 .video-wrapper {
   padding-bottom: calc(var(--aspect-ratio, 0.5625) * 100%);
   position: relative;
-  /* height: 0; */
 }
 .video-container iframe {
   position: absolute;
@@ -719,7 +724,7 @@ h2.title {
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
 @media (min-height: 1000) {
   .as-book-img-container {
@@ -775,6 +780,12 @@ h2.title {
   color: var(--dark-gold-color);
 }
 
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 .pkd-2 .pre-order-row {
   padding: 10em;
   display: flex;
@@ -783,7 +794,8 @@ h2.title {
 }
 
 .button-container {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -933,9 +945,21 @@ a.pre-order-light:hover {
   background: var(--beige);
   color: var(--dark-gold-color);
 }
+
 @media only screen and (max-width: 768px) {
+  .headers h2.intro-header {
+    font-size: 4em;
+    max-width: 80%;
+  }
+
+  .icon-container.kindle {
+    border: none;
+    width: 200px;
+  }
+
   .cta {
     height: auto;
+    padding: 3em 0;
   }
   .icons {
     display: flex;
@@ -956,6 +980,34 @@ a.pre-order-light:hover {
     align-items: center;
     flex-direction: column;
   }
+
+  .pkd-2 {
+    padding: 6em 2em;
+  }
+
+  .pkd-2 .container {
+    padding: 2em;
+  }
+
+  .pkd-2 .pre-order-row {
+    padding: 3em 0;
+  }
+
+  .pkd-2 a.pre-order {
+    width: 150px;
+    padding: 2em 0;
+    margin: 4px;
+  }
+
+  .quote {
+    padding: 3em 2em 2em 2em;
+  }
+
+  .pull-out-quote {
+    font-size: 2em;
+    width: 100%;
+  }
+
   .pkd-description {
     padding-left: 20px;
     padding-right: 20px;
@@ -963,6 +1015,10 @@ a.pre-order-light:hover {
   .pkd {
     min-height: 2340px;
     background: rgb(0, 0, 0);
+  }
+
+  .about-the-author {
+    box-shadow: inset 0 0 0 1000px rgb(255 255 255);
   }
   .about-the-author-image {
     height: 300px;

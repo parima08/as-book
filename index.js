@@ -21,7 +21,6 @@
 
     // // When the window is resized
     // $(window).resize(function () {
-
     //     var newWidth = $fluidEl.width();
 
     //     // Resize all videos according to their own aspect ratio
@@ -36,6 +35,7 @@
 
     //     // Kick off one resize to fix all videos on page load
     // }).resize();
+
 
     $('.slider').slick({
         dots: true,
@@ -197,7 +197,7 @@
     // const aboutAsStart = aboutAs.offsetTop;
     // const aboutAsHeight = aboutAs.scrollHeight;
     // const introRealHeight = introDiv.scrollHeight; * .65
-    console.log(document.querySelector('.about-as-book-reveal').scrollHeight);
+    //console.log(document.querySelector('.about-as-book-reveal').scrollHeight);
     // const aboutTheAuthor = document.querySelector("#about-the-autor");
     // const aboutTheAuthorTop = aboutTheAuthor.top * .65;
 
