@@ -532,24 +532,34 @@
         }
     })
 
-    //const innerWidth = 1000;
+    // //const innerWidth = 1000;
 
 
-    to(".horizontal-scroll-window", {
-        xPercent: -80,
-        x: () => -200,
-        ease: "none",
-        scrollTrigger: {
-            trigger: ".horizontal-scroll-container",
-            start: "bottom bottom",
-            end: () => 10000,
-            scrub: true,
-            markers: markersFlag,
-            pin: '.six-fundas',
-            invalidateOnRefresh: true,
-            anticipatePin: 1,
-        }
-    })
+    // to(".horizontal-scroll-window", {
+    //     xPercent: -80,
+    //     x: () => -200,
+    //     ease: "none",
+    //     scrollTrigger: {
+    //         trigger: ".horizontal-scroll-container",
+    //         start: "bottom bottom",
+    //         end: () => 10000,
+    //         scrub: true,
+    //         markers: markersFlag,
+    //         pin: '.six-fundas',
+    //         invalidateOnRefresh: true,
+    //         anticipatePin: 1,
+    //     }
+    // })
+
+    boxes.forEach((box, i) => {
+        const anim = gsap.fromTo(box, { autoAlpha: 0, y: 50 }, { duration: 1, autoAlpha: 1, y: 0 });
+        ScrollTrigger.create({
+            trigger: box,
+            animation: anim,
+            toggleActions: 'play none none none',
+            once: true,
+        });
+    });
 
 
 })();
