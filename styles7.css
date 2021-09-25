@@ -570,6 +570,7 @@ h2.atmasiddhi-shastra {
 h2.title {
   letter-spacing: 1.3px;
   font-family: var(--serif), serif;
+  font-size: 4em;
   background: radial-gradient(
     circle,
     var(--gold-color) 0%,
@@ -577,7 +578,6 @@ h2.title {
     var(--dark-brown) 70%,
     var(--dark-gold-color) 100%
   );
-  font-size: 4em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
@@ -796,9 +796,19 @@ a.pre-order {
   cursor: pointer;
 }
 
+a.pre-order.pre-order-light {
+  border: 1px solid var(--beige);
+  color: var(--beige);
+}
+
 a.pre-order:hover {
   color: white;
   background-color: var(--dark-gold-color);
+}
+
+a.pre-order-light:hover {
+  color: var(--dark-gold-color);
+  background-color: var(--beige);
 }
 
 .quote {

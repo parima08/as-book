@@ -1,5 +1,7 @@
 (function () {
 
+    const markersFlag = false;
+
     // var $allVideos = $("iframe[src^='//www.youtube.com']"),
 
     //     // The element that is fluid width
@@ -115,7 +117,7 @@
             trigger: '.as-book-img-container',
             start: "middle middle",
             end: "+=300",
-            markers: true,
+            markers: markersFlag,
             scrub: 1,
             immediateRender: false,
         }
@@ -207,7 +209,7 @@
                 start: () => "center center",
                 endTrigger: '.about-as-book-reveal',
                 end: () => 'bottom bottom', //`+=${document.querySelector('.about-as-book-reveal').scrollHeight}`,
-                markers: true,
+                markers: markersFlag,
                 pin: '.as-book-and-text',
                 anticipatePin: 1,
             }
@@ -220,7 +222,7 @@
                 scrub: 1,
                 start: () => "middle -10%",
                 end: () => "middle -20%",
-                markers: true,
+                markers: markersFlag,
             }
         }).to('.as-book-img-container', {
             xPercent: -50,
@@ -230,7 +232,7 @@
                 scrub: 1,
                 start: () => "middle -20%",
                 end: () => "middle -30%",
-                markers: true,
+                markers: markersFlag,
             }
         })
 
@@ -243,7 +245,7 @@
                 scrub: 1,
                 start: () => "middle -20%",
                 end: () => "middle -30%",
-                markers: true,
+                markers: markersFlag,
             }
         })
 
@@ -400,7 +402,7 @@
         scrollTrigger: {
             pin: ".quote",
             trigger: '.quote',
-            markers: true,
+            markers: markersFlag,
             start: "center center",
             end: "+=400",
             anticipatePin: 1,
@@ -416,11 +418,11 @@
             color: beigeColor,
             scrollTrigger: {
                 trigger: '.quote',
-                markers: true,
+                markers: markersFlag,
                 start: "center center",
                 end: "+=100",
                 scrub: true,
-                markers: true,
+                markers: markersFlag,
             }
         })
         .to(".pull-out-quote .line2", {
@@ -428,11 +430,10 @@
             color: beigeColor,
             scrollTrigger: {
                 trigger: '.quote',
-                markers: true,
+                markers: markersFlag,
                 start: "center center +=100",
                 end: "+=200",
                 scrub: true,
-                markers: true,
             }
         })
         .to(".pull-out-quote .line3", {
@@ -440,11 +441,10 @@
             color: beigeColor,
             scrollTrigger: {
                 trigger: '.quote',
-                markers: true,
+                markers: markersFlag,
                 start: "center center +=200",
                 end: "+=300",
                 scrub: true,
-                markers: true,
             }
         })
         .to(".pull-out-quote .line4", {
@@ -452,12 +452,10 @@
             color: beigeColor,
             scrollTrigger: {
                 trigger: '.quote',
-                markers: true,
+                markers: markersFlag,
                 start: "center center +=300",
                 end: "+=400",
                 scrub: true,
-                markers: true,
-
             }
         })
     // .to(".pull-out-quote .line3", {
@@ -488,10 +486,11 @@
 
         scrollTrigger: {
             pin: '.about-the-author',
-            start: 'center center',
+            start: 'top top',
             anticipatePin: 1,
-            markers: true,
-            end: () => `+=${aboutAuthorTotalHeight}`,
+            markers: markersFlag,
+            endTrigger: '.six-fundamental-background',
+            end: () => `top bottom`,
             immediateRender: false,
         }
     })
@@ -504,7 +503,7 @@
                 start: aboutAuthorTop,
                 end: aboutAuthorTop + (scrollFactor * 1),
                 scrub: true,
-                markers: true,
+                markers: markersFlag,
             }
         })
     }
@@ -517,7 +516,7 @@
                 start: aboutAuthorTop,
                 end: aboutAuthorTop + (scrollFactor * 1),
                 scrub: true,
-                markers: true,
+                markers: markersFlag,
             }
         })
     }
@@ -529,7 +528,7 @@
             start: aboutAuthorTop + (scrollFactor * .5),
             end: aboutAuthorTop + (scrollFactor * 1.5),
             scrub: true,
-            markers: true,
+            markers: markersFlag,
         }
     })
 
@@ -545,7 +544,7 @@
             start: "bottom bottom",
             end: () => 10000,
             scrub: true,
-            markers: true,
+            markers: markersFlag,
             pin: '.six-fundas',
             invalidateOnRefresh: true,
             anticipatePin: 1,

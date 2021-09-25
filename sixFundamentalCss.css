@@ -1,7 +1,29 @@
+:root {
+  --page-count: 20;
+  --page-scroll: 25;
+  --underline: rgba(64, 64, 64, 0.4);
+  --spine: #000;
+  --cover: #1a1a1a;
+  --bg: #4d4d4d;
+  --insert: #d9d9d9;
+  --page: #e6e6e6;
+  --gold-color: #bb965e;
+  --dark-gold-color: #140f09;
+  --serif: "Libre Baskerville";
+  --beige: #ddcda9;
+  --dark-brown: #885830;
+  --sans-serif: "Open Sans", "Raleway";
+  --intro-bg-color: black;
+  --intro-text-color: white;
+}
+
 .spiritual-gold {
-  font-family: Libre Bakersville;
+  font-family: var(--serif);
   font-weight: bold;
-  font-size: 40px;
+  letter-spacing: 1.3px;
+  font-family: var(--serif), serif;
+  font-size: 4em;
+  padding: 1em 0;
   text-align: center;
   background: -webkit-linear-gradient(#4f341f, #c49368, #4f341f);
   -webkit-background-clip: text;
@@ -9,42 +31,48 @@
 }
 .six-fundamental-background p {
   color: #ddcda9;
-  font-family: Open sans;
+  font-family: var(--sans-serif);
+  font-size: 1.5em;
 }
+
+.six-funda-text {
+  width: 60%;
+  padding: 2em 0 4em 0;
+  margin: 0 auto;
+}
+
 .six-fundamental-background {
   background: url(./img/Landing\ Page.png);
   background-position: center;
   background-size: contain;
-  padding:50px 0px;
+  padding: 50px 0px;
 }
-.golden-map-background{
+.golden-map-background {
   background: url(./img/golden-map.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding:50px 0px;
+  padding: 50px 0px;
 }
-.golden-map-background img{
-max-width: 244px;
+.golden-map-background img {
+  max-width: 244px;
 }
-.golden-map-background h6{
+.golden-map-background h6 {
   color: #3e1d0b;
-  font-family: Open sans;
+  font-family: var(--sans-serif);
   font-size: 40px;
-
 }
-.golden-map-background hr{
-  border-top: 1px solid  #3e1d0b;
+.golden-map-background hr {
+  border-top: 1px solid #3e1d0b;
   width: 30%;
-  background-color:#3e1d0b ;
+  background-color: #3e1d0b;
   opacity: 1;
-  height: 0px!important;
+  height: 0px !important;
 }
-.golden-map-background h2{
+.golden-map-background h2 {
   color: #3e1d0b;
-  font-family:Libre Bakersville;
+  font-family: Libre Bakersville;
   font-size: 49px;
-
 }
 .circle {
   position: relative;
@@ -59,15 +87,16 @@ max-width: 244px;
   display: flex;
   flex-direction: row;
 }
-.w-40{
+.w-40 {
   width: 40%;
 }
 .tick p {
   color: #ddcda9;
-  font-family: Open sans;
+  font-family: var(--serif);
   margin-bottom: auto;
   display: flex;
   max-width: 150px;
+  font-size: 1.5em;
   flex-direction: column;
 }
 .circle .tick:nth-child(1) {
@@ -117,10 +146,10 @@ max-width: 244px;
   list-style: none;
   color: #ddcda9;
   display: flex;
-  font-family: Open sans;
+  font-family: var(--sans-serif);
 }
 .six-fundamental-list li::before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 30px;
   min-width: 61px;
@@ -128,7 +157,7 @@ max-width: 244px;
   background-size: contain;
   background-repeat: round;
 }
-.six-fundamental-list{
+.six-fundamental-list {
   padding-bottom: 20px;
 }
 .discover-more {
@@ -146,18 +175,16 @@ max-width: 244px;
   background: #ddcda9;
   color: #fff;
 }
-@media (max-width:1200px) {
-  .six-fundamental-background{
-    background-size:cover ;
+@media (max-width: 1200px) {
+  .six-fundamental-background {
+    background-size: cover;
   }
 }
-@media (max-width:576px) {
-
+@media (max-width: 576px) {
   .circle .tick {
     display: none;
   }
-  .golden-map-background hr{
-    
+  .golden-map-background hr {
     width: 70%;
   }
 }
