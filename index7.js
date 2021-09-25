@@ -551,15 +551,31 @@
     //     }
     // })
 
-    boxes.forEach((box, i) => {
-        const anim = gsap.fromTo(box, { autoAlpha: 0, y: 50 }, { duration: 1, autoAlpha: 1, y: 0 });
-        ScrollTrigger.create({
-            trigger: box,
-            animation: anim,
-            toggleActions: 'play none none none',
-            once: true,
-        });
-    });
+    //to('.six-fundamental-background')
 
+    to('.tick.right', {
+        //background: "red",
+        opacity: 1,
+        xPercent: 20,
+        scrollTrigger: {
+            trigger: '.six-fundamental-background',
+            start: "center center",
+            end: "+=200",
+            scrub: true,
+            markers: markersFlag,
+        }
+    })
+
+    to('.tick.left', {
+        opacity: 1,
+        xPercent: -20,
+        scrollTrigger: {
+            trigger: '.six-fundamental-background',
+            start: "center center",
+            end: "+=400",
+            scrub: true,
+            markers: markersFlag,
+        }
+    })
 
 })();
