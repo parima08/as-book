@@ -1,0 +1,163 @@
+.spiritual-gold {
+  font-family: Libre Bakersville;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  background: -webkit-linear-gradient(#4f341f, #c49368, #4f341f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.six-fundamental-background p {
+  color: #ddcda9;
+  font-family: Open sans;
+}
+.six-fundamental-background {
+  background: url(./img/Landing\ Page.png);
+  background-position: center;
+  background-size: contain;
+  padding:50px 0px;
+}
+.golden-map-background{
+  background: url(./img/golden-map.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding:50px 0px;
+}
+.golden-map-background img{
+max-width: 244px;
+}
+.golden-map-background h6{
+  color: #3e1d0b;
+  font-family: Open sans;
+  font-size: 40px;
+
+}
+.golden-map-background hr{
+  border-top: 1px solid  #3e1d0b;
+  width: 30%;
+  background-color:#3e1d0b ;
+  opacity: 1;
+  height: 0px!important;
+}
+.golden-map-background h2{
+  color: #3e1d0b;
+  font-family:Libre Bakersville;
+  font-size: 49px;
+
+}
+.circle {
+  position: relative;
+  margin-bottom: 50px;
+}
+.circle .tick {
+  position: absolute;
+
+  top: 50%;
+
+  margin-top: -5px;
+  display: flex;
+  flex-direction: row;
+}
+.w-40{
+  width: 40%;
+}
+.tick p {
+  color: #ddcda9;
+  font-family: Open sans;
+  margin-bottom: auto;
+  display: flex;
+  max-width: 150px;
+  flex-direction: column;
+}
+.circle .tick:nth-child(1) {
+  transform: rotate(-45deg) translate(250px);
+
+  left: 50%;
+}
+.circle .tick:nth-child(1) p {
+  transform: rotate(45deg);
+}
+.circle .tick:nth-child(2) {
+  transform: rotate(0deg) translate(250px);
+  left: 50%;
+}
+.circle .tick:nth-child(2) p {
+  transform: rotate(0deg);
+}
+.circle .tick:nth-child(3) {
+  transform: rotate(45deg) translate(250px);
+  left: 50%;
+}
+.circle .tick:nth-child(3) p {
+  transform: rotate(-45deg);
+}
+.circle .tick:nth-child(4) {
+  transform: rotate(225deg) translate(250px);
+  left: 25%;
+}
+.circle .tick:nth-child(4) p {
+  transform: rotate(-225deg);
+}
+.circle .tick:nth-child(5) {
+  transform: rotate(180deg) translate(250px);
+  left: 25%;
+}
+.circle .tick:nth-child(5) p {
+  transform: rotate(-180deg);
+}
+.circle .tick:nth-child(6) {
+  transform: rotate(135deg) translate(250px);
+  left: 25%;
+}
+.circle .tick:nth-child(6) p {
+  transform: rotate(-135deg);
+}
+.six-fundamental-list li {
+  list-style: none;
+  color: #ddcda9;
+  display: flex;
+  font-family: Open sans;
+}
+.six-fundamental-list li::before {
+  content: '';
+  display: inline-block;
+  height: 30px;
+  min-width: 61px;
+  background-image: url(./img/motif.png);
+  background-size: contain;
+  background-repeat: round;
+}
+.six-fundamental-list{
+  padding-bottom: 20px;
+}
+.discover-more {
+  border: 1px solid #ddcda9;
+  text-transform: uppercase;
+  background: transparent;
+  width: auto;
+  color: #ddcda9;
+  font-size: 14px;
+  font-family: Libre Bakersville;
+  border-radius: 0px;
+}
+
+.discover-more:hover {
+  background: #ddcda9;
+  color: #fff;
+}
+@media (max-width:1200px) {
+  .six-fundamental-background{
+    background-size:cover ;
+  }
+}
+@media (max-width:576px) {
+
+  .circle .tick {
+    display: none;
+  }
+  .golden-map-background hr{
+    
+    width: 70%;
+  }
+}
