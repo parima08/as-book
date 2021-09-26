@@ -197,7 +197,7 @@
     background-size: cover;
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .circle .tick {
     display: none;
   }

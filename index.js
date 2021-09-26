@@ -180,235 +180,87 @@
             // markers: true
         }
     });
-    // const imgContainerTimeline = gsap.timeline({
-    //     scrollTrigger: {
-    //         trigger: ".about-as",
-    //         scrub: 1,
-    //         start: () => "top middle",
-    //         end: () => 100,
-    //         markers: true,
-    //     }
-    // })
 
-    //imgContainerTimeline.to('.as-book-image-container', { scale: .5, duration: 1 });
 
     const imageTimeline = gsap.timeline();
-    // const aboutAs = document.querySelector(".about-as");
-    // const aboutAsStart = aboutAs.offsetTop;
-    // const aboutAsHeight = aboutAs.scrollHeight;
-    // const introRealHeight = introDiv.scrollHeight; * .65
-    //console.log(document.querySelector('.about-as-book-reveal').scrollHeight);
-    // const aboutTheAuthor = document.querySelector("#about-the-autor");
-    // const aboutTheAuthorTop = aboutTheAuthor.top * .65;
-
-    imageTimeline
-        .to('.as-book-and-text', {
-            duration: 1,
-            scrollTrigger: {
-                trigger: '.as-book-and-text',
-                start: () => "center center",
-                endTrigger: '.about-as-book-reveal',
-                end: () => 'bottom bottom', //`+=${document.querySelector('.about-as-book-reveal').scrollHeight}`,
-                markers: markersFlag,
-                pin: '.as-book-and-text',
-                anticipatePin: 1,
-            }
-        })
-        .to('.as-book-img-container', {
-            scale: .8,
-            duration: 1,
-            scrollTrigger: {
-                trigger: ".about-as-book-reveal",
-                scrub: 1,
-                start: () => "middle -10%",
-                end: () => "middle -20%",
-                markers: markersFlag,
-            }
-        }).to('.as-book-img-container', {
-            xPercent: -50,
-            duration: 1,
-            scrollTrigger: {
-                trigger: ".about-as-book-reveal",
-                scrub: 1,
-                start: () => "middle -20%",
-                end: () => "middle -30%",
-                markers: markersFlag,
-            }
-        })
-
-        .to('.as-text', {
-            xPercent: 50,
-            duration: 1,
-            opacity: 1,
-            scrollTrigger: {
-                trigger: ".about-as-book-reveal",
-                scrub: 1,
-                start: () => "middle -20%",
-                end: () => "middle -30%",
-                markers: markersFlag,
-            }
-        })
-
-    // .to(".first-image", {
-    //     opacity: 0,
-    //     scrollTrigger: {
-    //         trigger: ".about-as",
-    //         start: () => "bottom bottom",
-    //         end: () => "4500 bottom",
-    //         markers: true,
-    //         scrub: true,
-    //     }
-    // })
-    // .to(".about-as", {
-    //     backgroundColor: '#885830',
-    //     scrollTrigger: {
-    //         trigger: ".about-as",
-    //         start: () => "3500 bottom",
-    //         end: () => "bottom bottom",
-    //         markers: true,
-    //         scrub: true,
-    //     }
-    // })
 
 
-    // const width = 1500; //document.querySelector(".horizontal-scroll-window").scrollWidth * .65;
-    // console.log(width);
+    ScrollTrigger.matchMedia({
+        "(min-width: 800px)": function () {
+            to('.as-book-and-text', {
+                duration: 1,
+                scrollTrigger: {
+                    trigger: '.as-book-and-text',
+                    start: () => "center center",
+                    endTrigger: '.about-as-book-reveal',
+                    end: () => 'bottom bottom', //`+=${document.querySelector('.about-as-book-reveal').scrollHeight}`,
+                    markers: markersFlag,
+                    pin: '.as-book-and-text',
+                    anticipatePin: 1,
+                }
+            })
+            to('.as-book-img-container', {
+                scale: .8,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".about-as-book-reveal",
+                    scrub: 1,
+                    start: () => "middle -10%",
+                    end: () => "middle -20%",
+                    markers: markersFlag,
+                }
+            })
+            to('.as-book-img-container', {
+                xPercent: -50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".about-as-book-reveal",
+                    scrub: 1,
+                    start: () => "middle -20%",
+                    end: () => "middle -30%",
+                    markers: markersFlag,
+                }
+            })
+
+            to('.as-text', {
+                xPercent: 50,
+                duration: 1,
+                opacity: 1,
+                scrollTrigger: {
+                    trigger: ".about-as-book-reveal",
+                    scrub: 1,
+                    start: () => "middle -20%",
+                    end: () => "middle -30%",
+                    markers: markersFlag,
+                }
+            })
+
+        }
+    })
 
 
-
-
-    // const testimonialTimeline = gsap.timeline();
-
-    // testimonialTimeline.to('.as-book-img-container', {
-    //     duration: 1,
-    //     scrollTrigger: {
-    //         start: () => "top top",
-    //         end: () => "",
-    //         markers: true,
-    //         pin: '.as-book-img-container',
-    //         anticipatePin: 1,
-    //     }
-    // })
-
-
-
-
-    // gsap.to(".about-as", {
-    //     background: "#ddcda9",
-    //     scrollTrigger: {
-    //         start: "bottom bottom",
-    //         end: () => 100,
-    //         markers: true,
-    //     }
-    // })
-
-    // to('.as-content .as-content-one', {
-    //     color: '#bb965e',
-    //     scrollTrigger: {
-    //         trigger: ".as-content",
-    //         scrub: 1,
-    //         start: () => "center",
-    //         end: 100,
-    //         markers: true,
-    //     }
-    // })
-    // .to('.as-content', {
-    //     display: 'block', duration: 1, scrollTrigger: {
-    //         trigger: ".about-as",
-    //         scrub: 1,
-    //         start: () => "top middle",
-    //         end: () => 100,
-    //         markers: true,
-    //         anticipatePin: 1,
-
-    //     }
-    // });
-
-    // to('.as-content', {
-    //     display: "block",
-    //     scrollTrigger: {
-    //         trigger: ".about-as",
-    //         scrub: 1,
-    //         start: () => "top middle",
-    //         end: () => 100,
-    //         markers: true,
-    //     }
-    // })
-
-    // to('.about-as', {
-    //     scrollTrigger: {
-    //         pin: '.about-as',
-    //         start: () => ""
-    //     }
-    // })
-
-    // const pkdContentHeight = document.querySelector('.pkd').scrollHeight;
-    // const pkdContentOffsetTop = document.querySelector('.pkd').offsetTop;
     const pkdTimeLine = gsap.timeline();
 
 
 
-
-
-    // to('.pkd-writing-image', {
-    //     scrollTrigger: {
-    //         scrub: 1,
-    //         start: () => pkdContentOffsetTop + (scrollFactor * 5),
-    //         end: () => pkdContentOffsetTop + (scrollFactor * 6)
-    //     },
-    //     scale: 1,
-    //     opacity: 1
-    // });
-    // to('.pull-out-quote', {
-    //     opacity: 0,
-    //     scrollTrigger: {
-    //         scrub: 1,
-    //         start: () => pkdContentOffsetTop + (scrollFactor * 6),
-    //         end: () => pkdContentOffsetTop + (scrollFactor * 7)
-    //     },
-    // })
-    // to('.pkd-description', {
-    //     scrollTrigger: {
-    //         scrub: 1,
-    //         start: () => pkdContentOffsetTop + (scrollFactor * 7),
-    //         end: () => pkdContentOffsetTop + (scrollFactor * 8)
-    //     },
-    //     opacity: 1
-    // });
-    // to('.pkd-content', {
-    //     scrollTrigger: {
-    //         trigger: '.pkd-content',
-    //         pin: '.pkd-content',
-    //         start: 'bottom bottom',
-    //         anticipatePin: 1,
-    //         end: () => `+=${scrollFactor * 8}`,
-    //     }
-    // })
-
-
-
-
-    // to('.about-the-author', {
-    //     scrollTrigger: {
-    //         trigger: '.about-the-author',
-    //         pin: '.about-the-author',
-    //         start: 'middle middle',
-    //         anticipatePin: 1,
-    //         end: () => `+=${scrollFactor * 8}`,
-    //     }
-    // })
-
-    to('.quote', {
-        scrollTrigger: {
-            pin: ".quote",
-            trigger: '.quote',
-            markers: markersFlag,
-            start: "center center",
-            end: "+=400",
-            anticipatePin: 1,
-            immediateRender: false,
+    ScrollTrigger.matchMedia({
+        "(min-width: 800px)": function () {
+            to('.quote', {
+                scrollTrigger: {
+                    pin: ".quote",
+                    trigger: '.quote',
+                    markers: markersFlag,
+                    start: "center center",
+                    end: "+=400",
+                    anticipatePin: 1,
+                    immediateRender: false,
+                }
+            })
         }
     })
+
+
+
 
     const beigeColor = "#ddcda9";
 
@@ -458,103 +310,56 @@
                 scrub: true,
             }
         })
-    // .to(".pull-out-quote .line3", {
-    //     opacity: 1,
-    //     color: "#bb965e",
-    //     scrollTrigger: {
-    //         start: pkdContentOffsetTop + (scrollFactor * 2),
-    //         end: pkdContentOffsetTop + (scrollFactor * 3),
-    //         scrub: true,
-    //         markers: true,
-    //     }
-    // })
-    // .to(".pull-out-quote .line4", {
-    //     opacity: 1,
-    //     color: "#bb965e",
-    //     scrollTrigger: {
-    //         start: pkdContentOffsetTop + (scrollFactor * 3),
-    //         end: pkdContentOffsetTop + (scrollFactor * 4),
-    //         scrub: true,
-    //         markers: true,
-    //     }
-    // })
+
 
     const aboutAuthorTop = document.querySelector('.bapa').offsetTop;
     const aboutAuthorTotalHeight = document.querySelector('.about-the-author').scrollHeight;
     const scrollFactor = aboutAuthorTotalHeight / 3;
-    to('.about-the-author', {
 
-        scrollTrigger: {
-            pin: '.about-the-author',
-            start: 'top top',
-            anticipatePin: 1,
-            markers: markersFlag,
-            endTrigger: '.six-fundamental-background',
-            end: () => `top bottom`,
-            immediateRender: false,
-        }
-    })
-    if (document.documentElement.clientWidth < 768) {
-        to('.about-the-author-image', {
-            //background: 'blue',
 
-            "clip-path": "circle(25% at 50% 40%)",
-            scrollTrigger: {
-                start: aboutAuthorTop,
-                end: aboutAuthorTop + (scrollFactor * 1),
-                scrub: true,
-                markers: markersFlag,
-            }
-        })
-    }
-    else {
-        to('.about-the-author-image', {
-            //background: 'blue',
 
-            "clip-path": "circle(25% at 20% 50%)",
-            scrollTrigger: {
-                start: aboutAuthorTop,
-                end: aboutAuthorTop + (scrollFactor * 1),
-                scrub: true,
-                markers: markersFlag,
-            }
-        })
-    }
+    ScrollTrigger.matchMedia({
+        "(min-width: 800px)": function () {
+            to('.about-the-author', {
+                scrollTrigger: {
+                    pin: '.about-the-author',
+                    start: 'top top',
+                    anticipatePin: 1,
+                    markers: markersFlag,
+                    endTrigger: '.six-fundamental-background',
+                    end: () => `top bottom`,
+                    immediateRender: false,
+                }
+            })
 
-    to('.bapa .container', {
-        opacity: 1,
-        yPercent: 40,
-        scrollTrigger: {
-            start: aboutAuthorTop + (scrollFactor * .5),
-            end: aboutAuthorTop + (scrollFactor * 1.5),
-            scrub: true,
-            markers: markersFlag,
+            to('.about-the-author-image', {
+                "clip-path": "circle(25% at 50% 40%)",
+                scrollTrigger: {
+                    start: aboutAuthorTop,
+                    end: aboutAuthorTop + (scrollFactor * 1),
+                    scrub: true,
+                    markers: markersFlag,
+                }
+            })
+            to('.bapa .container', {
+                opacity: 1,
+                yPercent: 40,
+                scrollTrigger: {
+                    start: aboutAuthorTop + (scrollFactor * .5),
+                    end: aboutAuthorTop + (scrollFactor * 1.5),
+                    scrub: true,
+                    markers: markersFlag,
+                }
+            })
         }
     })
 
-    // //const innerWidth = 1000;
 
 
-    // to(".horizontal-scroll-window", {
-    //     xPercent: -80,
-    //     x: () => -200,
-    //     ease: "none",
-    //     scrollTrigger: {
-    //         trigger: ".horizontal-scroll-container",
-    //         start: "bottom bottom",
-    //         end: () => 10000,
-    //         scrub: true,
-    //         markers: markersFlag,
-    //         pin: '.six-fundas',
-    //         invalidateOnRefresh: true,
-    //         anticipatePin: 1,
-    //     }
-    // })
 
-    //to('.six-fundamental-background')
+
 
     to('.tick.right', {
-        //background: "red",
         opacity: 1,
         xPercent: 20,
         scrollTrigger: {
