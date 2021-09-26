@@ -1,5 +1,5 @@
 (function () {
-$ = jQuery
+
     const markersFlag = false;
 
     $('.slider').slick({
@@ -367,29 +367,60 @@ $ = jQuery
         $('.navigation-drawer').toggleClass('active');
     })
 
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    console.log(timeZone);
-    const country = timeZone.split("/")[0].toLowerCase();
-    const city = timeZone.split('/')[1].toLowerCase();
     const amazonUrl = {
+        us: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
+        ca: "https://amzn.to/3kNgqwx",
+        au: "https://amzn.to/3i8YIBB",
+        nz: "https://amzn.to/3i8YIBB", //new_zealand
+        sg: "https://amzn.to/3zGPQt1", //because no europe
+        in: "https://amzn.to/3uqcBk5",
+    }
+
+    const amazonTimeZoneUrl = {
         america: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
         canada: "https://amzn.to/3kNgqwx",
         australia: "https://amzn.to/3i8YIBB",
         auckland: "https://amzn.to/3i8YIBB", //new_zealand
-        london: "https://amzn.to/3zGPQt1", //because no europe
-        singapore: "",
+        singapore: "https://amzn.to/3zGPQt1", //because no europe
         india: "https://amzn.to/3uqcBk5",
         calcutta: "https://amzn.to/3uqcBk5",
-        kolkata: "https://amzn.to/3uqcBk5"
+        kolkata: "https://amzn.to/3uqcBk5",
+        //london:
     }
-    const indiaTerms = ["india", "calcutta", "kolkata"];
+    let link;
 
-    const link = amazonUrl[country] || amazonUrl[city] || amazonUrl[timeZone] || amazonUrl.america;
+    $.getJSON('https://ipapi.co/json/', function (data) {
 
-    $('.amazon-link').attr('href', link);
+        console.log(JSON.stringify(data, null, 2));
 
-    if (indiaTerms.includes(country) || indiaTerms.includes(city)) {
-        $('.flipkart').removeClass('hide');
-    }
+        //const country = data.country.toLowerCase();
+        const countryCode = data.country_code.toLowerCase();
+
+        link = amazonUrl[countryCode] || amazonUrl.us;
+        $('.amazon-link').attr('href', link);
+        if (countryCode === "in") {
+            $('.flipkart').removeClass('hide');
+        }
+    }).fail(function (jqxhr, textStatus, error) {
+        var err = textStatus + ", " + error;
+        console.log("Request Failed: " + err);
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        console.log(timeZone);
+        const country = timeZone.split("/")[0].toLowerCase();
+        const city = timeZone.split('/')[1].toLowerCase();
+
+        const indiaTerms = ["india", "calcutta", "kolkata"];
+
+        const link = amazonTimeZoneUrl[country] || amazonTimeZoneUrl[city] || amazonTimeZoneUrl[timeZone] || amazonUrl.america;
+
+        $('.amazon-link').attr('href', link);
+
+        if (indiaTerms.includes(country) || indiaTerms.includes(city)) {
+            $('.flipkart').removeClass('hide');
+        }
+    })
+
+
+
 
 })();
