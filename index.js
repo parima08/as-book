@@ -1,5 +1,5 @@
 (function () {
-$ = jQuery
+    $ = jQuery
     const markersFlag = false;
 
     $('.slider').slick({
@@ -376,6 +376,7 @@ $ = jQuery
         //sg: "",
         in: "https://amzn.to/3uqcBk5",
     }
+    let link;
 
     $.getJSON('http://ip-api.com/json', function (data) {
 
@@ -384,13 +385,19 @@ $ = jQuery
         const country = data.country.toLowerCase();
         const countryCode = data.countryCode.toLowerCase();
 
-        const link = amazonUrl[countryCode] || amazonUrl.america;
+        link = amazonUrl[countryCode] || amazonUrl.america;
         $('.amazon-link').attr('href', link);
-
         if (country === "india") {
             $('.flipkart').removeClass('hide');
         }
-    });
+    }).fail(function (jqxhr, textStatus, error) {
+        var err = textStatus + ", " + error;
+        console.log("Request Failed: " + err);
+        link = amazonUrl.america;
+        $('.amazon-link').attr('href', link);
+    })
+
+
 
 
 
