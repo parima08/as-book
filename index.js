@@ -156,8 +156,8 @@
                 scrollTrigger: {
                     trigger: ".about-as-book-reveal",
                     scrub: 1,
-                    start: () => "middle -10%",
-                    end: () => "middle -20%",
+                    start: () => "cemter -10%",
+                    end: () => "cemter -20%",
                     markers: markersFlag,
                 }
             })
