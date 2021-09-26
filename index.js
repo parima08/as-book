@@ -1,5 +1,5 @@
 (function () {
-    $ = jQuery
+
     const markersFlag = false;
 
     $('.slider').slick({
@@ -156,8 +156,8 @@
                 scrollTrigger: {
                     trigger: ".about-as-book-reveal",
                     scrub: 1,
-                    start: () => "cemter -10%",
-                    end: () => "cemter -20%",
+                    start: () => "middle -10%",
+                    end: () => "middle -20%",
                     markers: markersFlag,
                 }
             })
@@ -367,6 +367,12 @@
         $('.navigation-drawer').toggleClass('active');
     })
 
+
+    $.getJSON('http://ip-api.com/json', function (data) {
+        console.log(JSON.stringify(data, null, 2));
+    });
+
+
     const amazonUrl = {
         us: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
         ca: "https://amzn.to/3kNgqwx",
@@ -374,6 +380,18 @@
         nz: "https://amzn.to/3i8YIBB", //new_zealand
         sg: "https://amzn.to/3zGPQt1", //because no europe
         in: "https://amzn.to/3uqcBk5",
+    }
+
+    const amazonTimeZoneUrl = {
+        america: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
+        canada: "https://amzn.to/3kNgqwx",
+        australia: "https://amzn.to/3i8YIBB",
+        auckland: "https://amzn.to/3i8YIBB", //new_zealand
+        singapore: "https://amzn.to/3zGPQt1", //because no europe
+        india: "https://amzn.to/3uqcBk5",
+        calcutta: "https://amzn.to/3uqcBk5",
+        kolkata: "https://amzn.to/3uqcBk5",
+        //london:
     }
     let link;
 
@@ -386,16 +404,27 @@
 
         link = amazonUrl[countryCode] || amazonUrl.us;
         $('.amazon-link').attr('href', link);
-        if (country === "india") {
+        if (countryCode === "in") {
             $('.flipkart').removeClass('hide');
         }
     }).fail(function (jqxhr, textStatus, error) {
         var err = textStatus + ", " + error;
         console.log("Request Failed: " + err);
-        link = amazonUrl.america;
-        $('.amazon-link').attr('href', link);
-    })
+        const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        console.log(timeZone);
+        const country = timeZone.split("/")[0].toLowerCase();
+        const city = timeZone.split('/')[1].toLowerCase();
 
+        const indiaTerms = ["india", "calcutta", "kolkata"];
+
+        const link = amazonUrl[country] || amazonUrl[city] || amazonUrl[timeZone] || amazonUrl.america;
+
+        $('.amazon-link').attr('href', link);
+
+        if (indiaTerms.includes(country) || indiaTerms.includes(city)) {
+            $('.flipkart').removeClass('hide');
+        }
+    })
 
 
 
