@@ -373,7 +373,6 @@
         au: "https://amzn.to/3i8YIBB",
         nz: "https://amzn.to/3i8YIBB", //new_zealand
         sg: "https://amzn.to/3zGPQt1", //because no europe
-        //sg: "",
         in: "https://amzn.to/3uqcBk5",
     }
     let link;
@@ -385,7 +384,7 @@
         const country = data.country.toLowerCase();
         const countryCode = data.countryCode.toLowerCase();
 
-        link = amazonUrl[countryCode] || amazonUrl.america;
+        link = amazonUrl[countryCode] || amazonUrl.us;
         $('.amazon-link').attr('href', link);
         if (country === "india") {
             $('.flipkart').removeClass('hide');
