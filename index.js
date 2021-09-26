@@ -314,10 +314,11 @@
             })
             to('.bapa .container', {
                 opacity: 1,
-                yPercent: 40,
+                yPercent: 50,
                 scrollTrigger: {
                     start: aboutAuthorTop + (scrollFactor * .5),
-                    end: aboutAuthorTop + (scrollFactor * 1.5),
+                    endTrigger: '.six-fundamental-background',
+                    end: "top bottom",
                     scrub: true,
                     markers: markersFlag,
                 }
