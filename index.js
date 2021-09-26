@@ -172,7 +172,27 @@
                     markers: markersFlag,
                 }
             })
-
+            to('.as-book-img-container', {
+                xPercent: -50,
+                duration: 1,
+                scrollTrigger: {
+                    trigger: ".about-as-book-reveal",
+                    scrub: 1,
+                    start: () => "middle -20%",
+                    end: () => "middle -30%",
+                    markers: markersFlag,
+                }
+            })
+            to('.navigation', {
+                display: 'block',
+                scrollTrigger: {
+                    trigger: ".about-as-book-reveal",
+                    scrub: 1,
+                    start: () => "middle -20%",
+                    end: () => "middle -30%",
+                    markers: markersFlag,
+                }
+            })
             to('.as-text', {
                 xPercent: 50,
                 duration: 1,
@@ -344,15 +364,18 @@
         auckland: "https://amzn.to/3i8YIBB", //new_zealand
         london: "https://amzn.to/3zGPQt1", //because no europe
         singapore: "",
-        india: "https://www.amazon.in/Atmasiddhi-Shastra-Spiritual-Truths-Soul/dp/9354894038/ref=sr_1_3?dchild=1&keywords=atmasiddhi&qid=1632597340&qsid=262-5474058-5927806&sr=8-3&sres=9354894038%2CB07GXCZZJ9%2CB01N0BHE5B%2CB0922W7FY5%2CB07JZJDCBJ%2C8187111828%2CB091CZC4VR%2CB091J2M8XX"
+        india: "https://www.amazon.in/Atmasiddhi-Shastra-Spiritual-Truths-Soul/dp/9354894038/ref=sr_1_3?dchild=1&keywords=atmasiddhi&qid=1632597340&qsid=262-5474058-5927806&sr=8-3&sres=9354894038%2CB07GXCZZJ9%2CB01N0BHE5B%2CB0922W7FY5%2CB07JZJDCBJ%2C8187111828%2CB091CZC4VR%2CB091J2M8XX",
+        calcutta: "https://www.amazon.in/Atmasiddhi-Shastra-Spiritual-Truths-Soul/dp/9354894038/ref=sr_1_3?dchild=1&keywords=atmasiddhi&qid=1632597340&qsid=262-5474058-5927806&sr=8-3&sres=9354894038%2CB07GXCZZJ9%2CB01N0BHE5B%2CB0922W7FY5%2CB07JZJDCBJ%2C8187111828%2CB091CZC4VR%2CB091J2M8XX",
+        kolkata: "https://www.amazon.in/Atmasiddhi-Shastra-Spiritual-Truths-Soul/dp/9354894038/ref=sr_1_3?dchild=1&keywords=atmasiddhi&qid=1632597340&qsid=262-5474058-5927806&sr=8-3&sres=9354894038%2CB07GXCZZJ9%2CB01N0BHE5B%2CB0922W7FY5%2CB07JZJDCBJ%2C8187111828%2CB091CZC4VR%2CB091J2M8XX"
     }
+    const indiaTerms = ["india", "calcutta", "kolkata"];
 
     const link = amazonUrl[country] || amazonUrl[city] || amazonUrl[timeZone] || amazonUrl.america;
 
     $('.amazon-link').attr('href', link);
 
-    if (country !== 'india') {
-        $('.flipkart').addClass('hide');
+    if (indiaTerms.includes(country) || indiaTerms.includes(city)) {
+        $('.flipkart').removeClass('hide');
     }
 
 })();

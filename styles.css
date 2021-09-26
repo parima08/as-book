@@ -43,6 +43,7 @@ body {
   position: fixed;
   z-index: 100;
   width: 100%;
+  display: none;
 }
 
 .nav-left {
@@ -58,6 +59,9 @@ body {
   width: 90%;
   margin: 0 auto;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-right {
@@ -136,6 +140,12 @@ body {
 
 .navigation-drawer.active {
   display: block !important;
+}
+
+.navigation-drawer .container a {
+  text-transform: none;
+  text-decoration: none;
+  color: var(--dark-brown);
 }
 
 .nav-drawer-item {
@@ -1147,15 +1157,21 @@ a.pre-order-light:hover {
     margin-left: 0% !important;
   }
   .abt-author {
-    padding: 20px !important;
+    padding: 2em 4em;
   }
+
+  .abt-author .about-bapa-text {
+    text-align: justify;
+    padding: 0 2em;
+  }
+
   .about-the-author .container-header {
     font-size: x-large;
     padding-top: 100px;
   }
   .pkd-2 p,
   .about-bapa-text {
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 0px;
   }
   h2.title {
@@ -1187,15 +1203,20 @@ a.pre-order-light:hover {
     align-self: center;
     justify-self: center;
     width: 100%;
-    padding: 1.2em;
-    font-size: 0.8em;
+    padding: 2em 4em;
+    font-size: 0.9em;
     /* max-width: 600px;
     grid-area: 1 / 1 / 4 / 2; */
     z-index: 0;
   }
 
+  .as-text p {
+    text-align: justify;
+  }
+
   .cta-top-band {
     margin-top: 0;
+    height: 30px;
   }
 
   .about-as-book-reveal {
@@ -1213,6 +1234,22 @@ a.pre-order-light:hover {
   .bapa {
     height: auto;
   }
+
+  .navigation {
+    display: block;
+  }
+
+  .navigation .nav-right {
+    display: none;
+  }
+
+  .cta h3 {
+    font-size: 2em;
+  }
+
+  .icon-container {
+    height: 100px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
@@ -1225,6 +1262,10 @@ a.pre-order-light:hover {
   .about-bapa-text {
     font-size: 1.5em;
     padding: 0px;
+  }
+
+  .navigation {
+    display: block;
   }
 }
 

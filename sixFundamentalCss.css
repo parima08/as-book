@@ -164,6 +164,7 @@
   color: #ddcda9;
   display: flex;
   font-family: var(--sans-serif);
+  font-size: 2em;
 }
 .six-fundamental-list li::before {
   content: "";
