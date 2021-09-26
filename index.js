@@ -395,7 +395,7 @@
     }
     let link;
 
-    $.getJSON('http://ip-api.com/json', function (data) {
+    $.getJSON('https://ipapi.co/json/', function (data) {
 
         console.log(JSON.stringify(data, null, 2));
 
@@ -417,7 +417,7 @@
 
         const indiaTerms = ["india", "calcutta", "kolkata"];
 
-        const link = amazonUrl[country] || amazonUrl[city] || amazonUrl[timeZone] || amazonUrl.america;
+        const link = amazonTimeZoneUrl[country] || amazonTimeZoneUrl[city] || amazonTimeZoneUrl[timeZone] || amazonUrl.america;
 
         $('.amazon-link').attr('href', link);
 
