@@ -882,11 +882,11 @@ h2.title {
   position: relative;
   /* height: 100vh; */
   background: white;
-  padding: 10em;
+  padding: 50px 20px;
 }
 
 .pkd-2 .container {
-  padding-top: 10em;
+  padding-top: 20px;
 }
 
 .pkd-2 .container .column {
@@ -896,12 +896,12 @@ h2.title {
 }
 
 .pkd-2 p {
+  font-size: 1.6em;
   font-family: var(--sans-serif);
-  font-size: 1.9em;
-  letter-spacing: -0.01em;
-  text-align: justify;
   color: var(--dark-gold-color);
+  text-align: center;
 }
+
 
 .about-scripture-text {
   display: flex;
@@ -916,7 +916,7 @@ h2.title {
 }
 
 .pkd-2 .pre-order-row {
-  padding: 10em;
+  padding:20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1119,9 +1119,7 @@ a.pre-order-light:hover {
     padding: 6em 2em;
   }
 
-  .pkd-2 .container {
-    padding: 2em;
-  }
+ 
 
   .pkd-2 .pre-order-row {
     padding: 3em 0;
@@ -1132,7 +1130,16 @@ a.pre-order-light:hover {
     padding: 2em 0;
     margin: 4px;
   }
+@media (max-width:768px) {
+  .pkd-2 a.pre-order{ width: 100%;
+  padding: 1em 0;
+  margin: 4px;
+ }
+ .pkd-2 .pre-order-row {
+  padding: 20px;
+}
 
+}
   .quote {
     padding: 3em 2em 2em 2em;
   }
