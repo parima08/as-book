@@ -1,5 +1,5 @@
 (function () {
-
+$ = jQuery
     const markersFlag = false;
 
     $('.slider').slick({
