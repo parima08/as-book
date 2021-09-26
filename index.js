@@ -372,7 +372,7 @@
         ca: "https://amzn.to/3kNgqwx",
         au: "https://amzn.to/3i8YIBB",
         nz: "https://amzn.to/3i8YIBB", //new_zealand
-        gb: "https://amzn.to/3zGPQt1", //because no europe
+        sg: "https://amzn.to/3zGPQt1", //because no europe
         //sg: "",
         in: "https://amzn.to/3uqcBk5",
     }
