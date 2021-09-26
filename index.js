@@ -367,12 +367,6 @@
         $('.navigation-drawer').toggleClass('active');
     })
 
-
-    $.getJSON('http://ip-api.com/json', function (data) {
-        console.log(JSON.stringify(data, null, 2));
-    });
-
-
     const amazonUrl = {
         us: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
         ca: "https://amzn.to/3kNgqwx",
@@ -399,7 +393,7 @@
 
         console.log(JSON.stringify(data, null, 2));
 
-        const country = data.country.toLowerCase();
+        //const country = data.country.toLowerCase();
         const countryCode = data.countryCode.toLowerCase();
 
         link = amazonUrl[countryCode] || amazonUrl.us;
