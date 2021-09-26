@@ -1587,3 +1587,13 @@ div.pp_pic_holder {
 .footer_top .q_social_icon_holder:last-child span.simple_social {
 	margin-right: 0
 }
+@media (max-width:768px) {
+  .social-link{
+    width: 75%;
+margin-left: auto;
+margin-right: auto;
+  }
+}
+
+  
+
