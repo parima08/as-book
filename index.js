@@ -333,7 +333,7 @@
         scrollTrigger: {
             trigger: '.six-fundamental-background',
             start: "center center",
-            end: "+=200",
+            end: "+=400",
             scrub: true,
             markers: markersFlag,
         }
