@@ -387,6 +387,13 @@
         kolkata: "https://amzn.to/3uqcBk5",
         //london:
     }
+
+    const preOrderKindle = {
+        us: "https://www.amazon.com/Atmasiddhi-Shastra-Spiritual-Complete-Commentary-ebook/dp/B09FN8Q697?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=sass076-20&linkId=cf3ae2813fc989d76d6f6273f8356096&language=en_US&ref_=as_li_ss_tl&pldnSite=1",
+        in: "https://www.amazon.in/Atmasiddhi-Shastra-Spiritual-Complete-Commentary-ebook/dp/B09FN8Q697/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=&sr=",
+        ca: "https://amzn.to/3ESlCa6",
+        au: "https://amzn.to/3lZ4hUu"
+    }
     let link;
 
     $.getJSON('https://ipapi.co/json/', function (data) {
@@ -398,6 +405,8 @@
 
         link = amazonUrl[countryCode] || amazonUrl.us;
         $('.amazon-link').attr('href', link);
+        const preOrderKindlelink = preOrderKindle[countryCode] || preOrderKindle.us;
+        $('.pre-order-kindle').attr('href', preOrderKindlelink);
         if (countryCode === "in") {
             $('.flipkart').removeClass('hide');
         }

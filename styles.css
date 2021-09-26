@@ -514,7 +514,8 @@ span.bold {
 
 .icon-container.kindle {
   border-left: 2px solid var(--dark-gold-color);
-  width: 300px;
+  /* width: 300px; */
+  padding: 1em;
 }
 
 .icon-container.flipkart {
@@ -899,7 +900,7 @@ h2.title {
   font-size: 1.6em;
   font-family: var(--sans-serif);
   color: var(--dark-gold-color);
-  text-align: center;
+  text-align: justify;
 }
 
 .about-scripture-text {
@@ -1209,6 +1210,7 @@ a.pre-order-light:hover {
   .about-bapa-text {
     font-size: 1.5em;
     padding: 0px;
+    text-align: center;
   }
   h2.title {
     font-size: 3em;
