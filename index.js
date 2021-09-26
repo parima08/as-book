@@ -328,6 +328,10 @@
             scrub: true,
             markers: markersFlag,
         }
+    });
+
+    $('.menu').click(() => {
+        $('.navigation-drawer').toggleClass('active');
     })
 
 })();
