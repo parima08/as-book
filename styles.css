@@ -499,8 +499,15 @@ span.bold {
 
 .icon-container.kindle {
   border-left: 2px solid var(--dark-gold-color);
-  border-right: 2px solid var(--dark-gold-color);
   width: 300px;
+}
+
+.icon-container.flipkart {
+  border-left: 2px solid var(--dark-gold-color);
+}
+
+.hide {
+  display: none;
 }
 
 .icon-container .normal-icon {
