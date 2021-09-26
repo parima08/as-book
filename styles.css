@@ -1080,6 +1080,13 @@ a.pre-order-light:hover {
   color: var(--dark-gold-color);
 }
 
+@media only screen and (max-width: 500px) {
+  .bapa {
+    height: auto;
+    min-height: 940px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .headers h2.intro-header {
     font-size: 4em;
@@ -1089,6 +1096,9 @@ a.pre-order-light:hover {
   .icon-container.kindle {
     border: none;
     width: 200px;
+  }
+  .icon-container.flipkart {
+    border: none;
   }
 
   .cta {
@@ -1248,7 +1258,15 @@ a.pre-order-light:hover {
   }
 
   .bapa {
-    height: auto;
+    height: 800px;
+  }
+
+  .abt-author h2.title {
+    padding: 1em 0;
+  }
+
+  .abt-author .about-bapa-text:last-of-type {
+    padding-bottom: 2em !important;
   }
 
   /* .navigation {
@@ -1266,6 +1284,9 @@ a.pre-order-light:hover {
   .icon-container {
     height: 100px;
   }
+  .navigation .spacer {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1100px) {
@@ -1280,9 +1301,21 @@ a.pre-order-light:hover {
     padding: 0px;
   }
 
-  .navigation {
-    display: block;
+  .as-book-img-container {
+    width: 60vh;
   }
+
+  h2.atmasiddhi-shastra {
+    font-size: 3em;
+  }
+
+  .as-text {
+    width: 45%;
+  }
+
+  /* .navigation {
+    display: block;
+  } */
 }
 
 @media only screen and (min-width: 1100px) {
@@ -1311,10 +1344,6 @@ a.pre-order-light:hover {
   }
   .navigation .nav-middle {
     display: none;
-  }
-
-  .navigation .spacer {
-    display: block;
   }
 
   .navigation .nav-right {
