@@ -41,7 +41,7 @@ body {
   height: 100px;
   background: white;
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   width: 100%;
   display: none;
 }
