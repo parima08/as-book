@@ -394,7 +394,7 @@
         console.log(JSON.stringify(data, null, 2));
 
         //const country = data.country.toLowerCase();
-        const countryCode = data.countryCode.toLowerCase();
+        const countryCode = data.country_code.toLowerCase();
 
         link = amazonUrl[countryCode] || amazonUrl.us;
         $('.amazon-link').attr('href', link);
