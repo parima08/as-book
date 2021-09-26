@@ -336,14 +336,17 @@
 
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const country = timeZone.split("/")[0].toLowerCase();
+    const city = timeZone.split('/')[1].toLowerCase();
     const amazonUrl = {
         america: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
         canada: "https://amzn.to/3kNgqwx",
         australia: "https://amzn.to/3i8YIBB",
-        new_zealand: "https://amzn.to/3i8YIBB",
+        auckland: "https://amzn.to/3i8YIBB", //new_zealand
+        london: "https://amzn.to/3zGPQt1", //because no europe
+        singapore: "",
     }
 
-    const link = amazonUrl[country] || amazonUrl.america;
+    const link = amazonUrl[country] || amazonUrl[city] || amazonUrl[timeZone] || amazonUrl.america;
 
     $('.amazon-link').attr('href', link);
 
