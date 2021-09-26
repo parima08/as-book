@@ -101,6 +101,11 @@ body {
   cursor: pointer;
 }
 
+.spacer {
+  display: none;
+  width: 33%;
+}
+
 .logo-container {
   height: 100px;
   float: left;
@@ -1239,9 +1244,9 @@ a.pre-order-light:hover {
     height: auto;
   }
 
-  .navigation {
+  /* .navigation {
     display: block;
-  }
+  } */
 
   .navigation .nav-right {
     display: none;
@@ -1299,6 +1304,10 @@ a.pre-order-light:hover {
   }
   .navigation .nav-middle {
     display: none;
+  }
+
+  .navigation .spacer {
+    display: block;
   }
 
   .navigation .nav-right {

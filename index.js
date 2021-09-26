@@ -206,7 +206,19 @@
                 }
             })
 
-        }
+        },
+        "(max-width: 800px)": function () {
+            to('.navigation', {
+                display: 'block',
+                scrollTrigger: {
+                    trigger: ".as-book-img-container",
+                    scrub: 1,
+                    start: () => "bottom bottom",
+                    end: () => "+=20%",
+                    markers: markersFlag,
+                }
+            })
+        },
     })
 
 
