@@ -355,6 +355,7 @@
     })
 
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    console.log(timeZone);
     const country = timeZone.split("/")[0].toLowerCase();
     const city = timeZone.split('/')[1].toLowerCase();
     const amazonUrl = {
