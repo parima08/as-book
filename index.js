@@ -2,41 +2,6 @@
 
     const markersFlag = false;
 
-    // var $allVideos = $("iframe[src^='//www.youtube.com']"),
-
-    //     // The element that is fluid width
-    //     $fluidEl = $("body");
-
-    // // Figure out and save aspect ratio for each video
-    // $allVideos.each(function () {
-
-    //     $(this)
-    //         .data('aspectRatio', this.height / this.width)
-
-    //         // and remove the hard coded width/height
-    //         .removeAttr('height')
-    //         .removeAttr('width');
-
-    // });
-
-    // // When the window is resized
-    // $(window).resize(function () {
-    //     var newWidth = $fluidEl.width();
-
-    //     // Resize all videos according to their own aspect ratio
-    //     $allVideos.each(function () {
-
-    //         var $el = $(this);
-    //         $el
-    //             .width(newWidth)
-    //             .height(newWidth * $el.data('aspectRatio'));
-
-    //     });
-
-    //     // Kick off one resize to fix all videos on page load
-    // }).resize();
-
-
     $('.slider').slick({
         dots: true,
         infinite: true,
@@ -60,9 +25,6 @@
 
     const introDiv = document.querySelector(".introduction");
     const introHeight = introDiv.scrollHeight * .65;
-
-    console.log(introHeight, window.innerHeight, window.scrollHeight, introDiv.innerHeight, introDiv.clientHeight);
-
 
 
     const firstIntroHeaderTl = gsap.timeline(
@@ -99,17 +61,6 @@
         }
     })
 
-    // set('.background-radiant', {
-    //     scale: 1.5,
-    //     opacity: 1,
-    //     scrollTrigger: {
-    //         trigger: '.as-book-img-container',
-    //         start: introHeight,
-    //         end: "middle middle",
-    //         markers: true,
-    //         scrub: 1,
-    //     }
-    // })
 
     to('.background-radiant', {
         opacity: 0,
@@ -333,7 +284,7 @@
             })
 
             to('.about-the-author-image', {
-                "clip-path": "circle(25% at 50% 40%)",
+                "clip-path": "circle(25% at 25% 55%)",
                 scrollTrigger: {
                     start: aboutAuthorTop,
                     end: aboutAuthorTop + (scrollFactor * 1),
@@ -353,10 +304,6 @@
             })
         }
     })
-
-
-
-
 
 
     to('.tick.right', {
