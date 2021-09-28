@@ -369,23 +369,24 @@
 
     const amazonUrl = {
         us: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
-        ca: "https://amzn.to/3kNgqwx",
-        au: "https://amzn.to/3i8YIBB",
-        nz: "https://amzn.to/3i8YIBB", //new_zealand
-        sg: "https://amzn.to/3zGPQt1", //because no europe
-        in: "https://amzn.to/3uqcBk5",
+        ca: "https://www.amazon.ca/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=9354894038&linkCode=am2&tag=sass0b7-20&linkId=4a74717397786047afb9a3fb91bd6bca",
+        au: "https://www.amazon.com.au/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0f-22&linkId=8fdc7a3b8419e681489f9dbcec11b7c4",
+        nz: "https://www.amazon.com.au/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0f-22&linkId=8fdc7a3b8419e681489f9dbcec11b7c4", //new_zealand
+        sg: "https://www.amazon.sg/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0d-22&linkId=bf39e236a2e97a1079dbc67eb1425a9d", //because no europe
+        in: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
+        uk: "https://www.amazon.co.uk/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=9354894038&linkCode=am2&tag=sass0d-21&linkId=94ff610af5d412d79f3a6db1984200e9"
     }
 
     const amazonTimeZoneUrl = {
         america: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl",
-        canada: "https://amzn.to/3kNgqwx",
-        australia: "https://amzn.to/3i8YIBB",
-        auckland: "https://amzn.to/3i8YIBB", //new_zealand
-        singapore: "https://amzn.to/3zGPQt1", //because no europe
-        india: "https://amzn.to/3uqcBk5",
-        calcutta: "https://amzn.to/3uqcBk5",
-        kolkata: "https://amzn.to/3uqcBk5",
-        //london:
+        canada: "https://www.amazon.ca/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=15121&creative=330641&creativeASIN=9354894038&linkCode=am2&tag=sass0b7-20&linkId=4a74717397786047afb9a3fb91bd6bca",
+        australia: "https://www.amazon.com.au/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0f-22&linkId=8fdc7a3b8419e681489f9dbcec11b7c4",
+        auckland: "https://www.amazon.com.au/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0f-22&linkId=8fdc7a3b8419e681489f9dbcec11b7c4", //new_zealand
+        singapore: "https://www.amazon.sg/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0d-22&linkId=bf39e236a2e97a1079dbc67eb1425a9d", //because no europe
+        india: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
+        calcutta: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
+        kolkata: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
+        london:"https://www.amazon.co.uk/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=9354894038&linkCode=am2&tag=sass0d-21&linkId=94ff610af5d412d79f3a6db1984200e9"
     }
 
     const preOrderKindle = {
