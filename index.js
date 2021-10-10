@@ -374,7 +374,7 @@
         nz: "https://www.amazon.com.au/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0f-22&linkId=8fdc7a3b8419e681489f9dbcec11b7c4", //new_zealand
         sg: "https://www.amazon.sg/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=9354894038&linkCode=am2&tag=sass0d-22&linkId=bf39e236a2e97a1079dbc67eb1425a9d", //because no europe
         in: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
-        gb: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl"
+        gb: "https://www.amazon.co.uk/Atmasiddhi-Shastra-Spiritual-Complete-Commentary/dp/9354894038/"
     }
 
     const amazonTimeZoneUrl = {
@@ -386,7 +386,7 @@
         india: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
         calcutta: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
         kolkata: "https://www.amazon.in/gp/offer-listing/9354894038/ref=as_li_tl?ie=UTF8&camp=3638&creative=24630&creativeASIN=9354894038&linkCode=am2&tag=sass08-21&linkId=5b831ef86f7ffe7f899ec15c41677919",
-        london: "https://smile.amazon.com/gp/product/9354894038?ie=UTF8&linkCode=sl1&tag=&linkId=6aab0fcb0be3b1bce9137d107a1e91b5&language=en_US&ref_=as_li_ss_tl"
+        london: "https://www.amazon.co.uk/Atmasiddhi-Shastra-Spiritual-Complete-Commentary/dp/9354894038/"
     }
 
     const preOrderKindle = {
@@ -396,6 +396,7 @@
         au: "https://amzn.to/3lZ4hUu",
         gb: "https://www.amazon.co.uk/gp/offer-listing/B09FN8Q697/ref=as_li_tl?ie=UTF8&camp=1634&creative=6738&creativeASIN=B09FN8Q697&linkCode=am2&tag=sass0d-21&linkId=830dd2e60cb9223280bdceb4c0f5c012",
     }
+    const flipkartUrl = "https://urldefense.com/v3/__https:/www.flipkart.com/atmasiddhi-shastra/p/itm2901e4fb01b4b?pid=9789354894039__;!!PH0vZokp8wwQNw!hplLHjr8uumhcTAhhH32oi3r0Iu58ECjgRiK0VCBbxTWDqCnaGNnYzwDlwkjn4zoLb8mW-JAN2E$"
     let link;
 
     $.getJSON('https://ipapi.co/json/', function (data) {
@@ -407,10 +408,15 @@
 
         link = amazonUrl[countryCode] || amazonUrl.us;
         $('.amazon-link').attr('href', link);
+        
         const preOrderKindlelink = preOrderKindle[countryCode] || preOrderKindle.us;
         $('.pre-order-kindle').attr('href', preOrderKindlelink);
         if (countryCode === "in") {
             $('.flipkart').removeClass('hide');
+            $('.pre-order-main-link').attr('href', flipkartUrl);
+        }
+        else{
+            $('.pre-order-main-link').attr('href', link);
         }
     }).fail(function (jqxhr, textStatus, error) {
         var err = textStatus + ", " + error;
