@@ -882,6 +882,7 @@ h2.title {
 
 .opacity-1 {
   opacity: 1;
+  transform: translate(0%, 0%);
 }
 
 .quote-motif {
