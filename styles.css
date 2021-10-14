@@ -882,12 +882,17 @@ h2.title {
 
 .opacity-1 {
   opacity: 1;
-  transform: translate(0%, 0%);
+  transform: translate(0%, 0%) !important;
 }
 
 .quote-motif {
     display: block;
     margin: 0 auto;
+}
+
+.pre-order-row .button-container {
+  align-items: flex-start !important;
+  justify-content: start !important;
 }
 
 .pkd-2 {
@@ -902,7 +907,7 @@ h2.title {
 }
 
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .pkd-2 .container {
