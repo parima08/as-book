@@ -345,7 +345,7 @@
         scrollTrigger: {
             trigger: '.six-fundamental-background',
             start: "center center",
-            end: "+=400",
+            end: "+=200",
             scrub: true,
             markers: markersFlag,
         }
@@ -357,7 +357,7 @@
         scrollTrigger: {
             trigger: '.six-fundamental-background',
             start: "center center",
-            end: "+=400",
+            end: "+=200",
             scrub: true,
             markers: markersFlag,
         }
@@ -408,14 +408,14 @@
 
         link = amazonUrl[countryCode] || amazonUrl.us;
         $('.amazon-link').attr('href', link);
-        
+
         const preOrderKindlelink = preOrderKindle[countryCode] || preOrderKindle.us;
         $('.pre-order-kindle').attr('href', preOrderKindlelink);
         if (countryCode === "in") {
             $('.flipkart').removeClass('hide');
             $('.pre-order-main-link').attr('href', flipkartUrl);
         }
-        else{
+        else {
             $('.pre-order-main-link').attr('href', link);
         }
     }).fail(function (jqxhr, textStatus, error) {
