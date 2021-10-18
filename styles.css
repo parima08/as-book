@@ -886,8 +886,8 @@ h2.title {
 }
 
 .quote-motif {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .pre-order-row .button-container {
@@ -897,9 +897,11 @@ h2.title {
 
 .pkd-2 {
   position: relative;
-  /* height: 100vh; */
+  height: 80vh;
   background: white;
   padding: 50px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .pkd-2 h2.title {
@@ -1115,6 +1117,84 @@ a.pre-order-light:hover {
 .footer-element.quick-links {
   display: flex;
   justify-content: center;
+}
+
+.bestseller-img-container {
+  max-width: 150px;
+}
+
+.awards {
+  width: 100%;
+  padding: 40px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ribbon-container {
+  width: 50%;
+}
+
+.ribbon {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-width: 2px 0;
+  position: relative;
+  display: block;
+  padding: 0.75em 0 0.75em 0.5em;
+  border-top: 2px solid var(--dark-brown);
+  border-bottom: 2px solid var(--dark-brown);
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: block;
+}
+
+.ribbon:before {
+  content: "";
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  position: absolute;
+  top: -50%;
+  bottom: 50%;
+  left: 1.6em;
+  right: 0;
+  border: 2px solid var(--dark-brown);
+}
+
+.ribbon:after {
+  content: "";
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  position: absolute;
+  top: -50%;
+  bottom: 50%;
+  left: 0;
+  right: 1.6em;
+  border: 2px solid var(--dark-brown);
 }
 
 @media only screen and (max-width: 500px) {
@@ -1632,5 +1712,13 @@ div.pp_pic_holder {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .bestseller-img-container {
+    border-top: 1px solid var(--dark-gold-color);
+  }
+  .ribbon-container {
+    width: 90%;
+    font-size: 0.75em;
   }
 }
