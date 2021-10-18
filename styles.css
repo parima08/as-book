@@ -1726,4 +1726,8 @@ div.pp_pic_holder {
     width: 90%;
     font-size: 0.75em;
   }
+
+  .pkd-2 {
+    height: auto;
+  }
 }
