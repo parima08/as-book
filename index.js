@@ -27,16 +27,7 @@
     const introHeight = introDiv.scrollHeight * .65;
 
 
-    const firstIntroHeaderTl = gsap.timeline(
-        {
-            scrollTrigger: {
-                trigger: '.intro-header.first',
-                start: () => 0,
-                end: () => 1 * (introHeight / 6),
-                scrub: 1
-            }
-        }
-    );
+
 
     const background = gsap.timeline();
 
@@ -74,8 +65,70 @@
         }
     })
 
+    const firstIntroHeaderTl = gsap.timeline(
+        {
+            scrollTrigger: {
+                trigger: '.intro-header.first',
+                start: () => 0,
+                end: () => 1 * (introHeight / 6),
+                scrub: 1
+            }
+        }
+    );
+
+
+    // to('.intro-header.first', {
+    //     yPercent: 100,
+    //     opacity: 0,
+    //     scrollTrigger: {
+    //         trigger: '.intro-header.first',
+    //         start: 0,
+    //         end: (introHeight / 7),
+    //     }
+    // })
+
+    // to('.intro-header.second', {
+    //     yPercent: -100,
+    //     opacity: 1,
+    //     scrollTrigger: {
+    //         trigger: '.intro-header.second',
+    //         start: (introHeight / 7) * 2,
+    //         end: (introHeight / 7) * 3,
+    //     }
+    // })
+
+    // to('.intro-header.second', {
+    //     yPercent: 100,
+    //     opacity: 0,
+    //     scrollTrigger: {
+    //         trigger: '.intro-header.second',
+    //         start: (introHeight / 7) * 4,
+    //         end: (introHeight / 7) * 5,
+    //     }
+    // })
+
+    // to('.intro-header.third', {
+    //     yPercent: -100,
+    //     opacity: 1,
+    //     scrollTrigger: {
+    //         trigger: '.intro-header.third',
+    //         start: (introHeight / 7) * 5,
+    //         end: (introHeight / 7) * 6,
+    //     }
+    // })
+
+    // to('.intro-header.third', {
+    //     yPercent: 100,
+    //     opacity: 0,
+    //     scrollTrigger: {
+    //         trigger: '.intro-header.third',
+    //         start: (introHeight / 7) * 6,
+    //         end: (introHeight / 7) * 7,
+    //     }
+    // })
+
     firstIntroHeaderTl
-        .to('.intro-header.first', { yPercent: 100, opacity: 0, duration: 1 })
+        .to('.intro-header.first', { yPercent: 50, opacity: 0 })
 
     const secondIntroHeaderTl = gsap.timeline(
         {
@@ -84,14 +137,14 @@
                 markers: false,
                 start: () => 1 * (introHeight / 6),
                 end: () => 3 * (introHeight / 6),
-                scrub: 1
+                scrub: true
             }
         }
     );
 
     secondIntroHeaderTl
-        .to('.intro-header.second', { yPercent: -100, opacity: 1, duration: 1 })
-        .to('.intro-header.second', { yPercent: 0, opacity: 0, duration: 1 })
+        .to('.intro-header.second', { yPercent: -50, top: "50%", y: 0, opacity: 1, duration: 1 })
+        .to('.intro-header.second', { yPercent: 50, opacity: 0, duration: 1 })
 
 
     const thirdIntroHeaderTl = gsap.timeline(
@@ -101,14 +154,17 @@
                 markers: false,
                 start: () => 3 * (introHeight / 6),
                 end: () => 5 * (introHeight / 6),
-                scrub: 1
+                scrub: true
             }
         }
     );
 
     thirdIntroHeaderTl
-        .to('.intro-header.third', { yPercent: -100, opacity: 1, duration: 1 })
-        .to('.intro-header.third', { yPercent: 0, opacity: 0, duration: 1 })
+        .to('.intro-header.third', { yPercent: -50, top: "50%", y: 0, opacity: 1, duration: 1 })
+        .to('.intro-header.third', { yPercent: 50, opacity: 0, duration: 1 })
+
+
+
 
 
     to('.background-text.move-right', {

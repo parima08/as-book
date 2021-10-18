@@ -1130,10 +1130,11 @@ a.pre-order-light:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  font-family: var(--sans-serif);
 }
 
 .ribbon-container {
-  width: 50%;
+  width: 40%;
 }
 
 .ribbon {
@@ -1451,6 +1452,10 @@ a.pre-order-light:hover {
 }
 
 @media only screen and (max-width: 1000px) {
+  .ribbon-container {
+    width: 70%;
+  }
+
   .navigation .container {
     display: flex;
     justify-content: space-between;
