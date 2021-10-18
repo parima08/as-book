@@ -1456,6 +1456,25 @@ a.pre-order-light:hover {
     width: 70%;
   }
 
+  .pkd-2 {
+    height: auto;
+  }
+
+  .pkd-2 .title,
+  .pkd-2 p {
+    text-align: center !important;
+  }
+
+  .pre-order-row {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 4em !important;
+  }
+
+  .pre-order-row .button-container {
+    justify-content: center !important;
+  }
+
   .navigation .container {
     display: flex;
     justify-content: space-between;
