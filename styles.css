@@ -897,7 +897,7 @@ h2.title {
 
 .pkd-2 {
   position: relative;
-  height: 80vh;
+  height: 70vh;
   background: white;
   padding: 50px 20px;
   display: flex;
@@ -905,7 +905,7 @@ h2.title {
 }
 
 .pkd-2 h2.title {
-  padding: 1em 0;
+  padding: 1em 0 2em 0;
 }
 
 .text-left {
@@ -1131,6 +1131,38 @@ a.pre-order-light:hover {
   justify-content: center;
   flex-direction: column;
   font-family: var(--sans-serif);
+  background: var(--dark-brown);
+}
+
+.awards-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.awards-container .books-bestseller {
+  padding: 20px;
+  text-align: center;
+}
+
+.awards-container p {
+  font-family: var(--sans-serif);
+  font-size: 1.4em;
+  font-weight: 500;
+  /* color: var(--dark-gold-color); */
+  color: white;
+}
+
+.awards-container p.num-one {
+  font-family: var(--serif);
+  font-size: 5em;
+  font-weight: 800;
+}
+
+.awards p.desc {
+  font-size: 1.7em;
+  font-weight: 500;
+  color: var(--beige);
+  padding-bottom: 10px;
 }
 
 .ribbon-container {
