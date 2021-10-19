@@ -772,18 +772,96 @@ h2.title {
 
 .testimonials {
   width: 100vw;
-  height: 100vh;
   display: flex;
   /* justify-content: center;
     align-items: center; */
-  background: var(--bg);
+  /* background: var(--bg);
   background: var(--beige);
-  font-family: "Amiri", serif;
+  font-family: "Amiri", serif; */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   overflow: hidden;
+}
+
+#carouselExampleControls {
+  width: 100%;
+}
+
+/* #carouselExampleControls .carousel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+#carouselExampleControls .carousel-item-container {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-height: 600px;
+}
+
+#carouselExampleControls .carousel-item .carousel-quote {
+  width: 50%;
+  background-image: linear-gradient(
+    to left bottom,
+    #8c6941,
+    #a07c4d,
+    #b4855c,
+    #b6885c,
+    #b78b5c,
+    #b98f5d,
+    #a07c4d,
+    #8c6941
+  );
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4em;
+}
+
+#carouselExampleControls .carousel-item .carousel-quote p {
+  font-family: var(--serif);
+  font-size: 2em;
+  text-align: center;
+}
+
+#carouselExampleControls .carousel-item .carousel-quote p.carousel-person {
+  font-family: var(--sans-serif);
+  font-size: 1.7em;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+#carouselExampleControls .carousel-item .carousel-quote p.carousel-title {
+  font-family: var(--sans-serif);
+  font-size: 1.7em;
+  text-align: center;
+}
+
+#carouselExampleControls .carousel-item img {
+  width: 50%;
+  object-fit: cover;
+}
+
+#carouselExampleControls .carousel-item img.carousel-quote-motif {
+  width: 100px;
+}
+
+#carouselExampleControls .carousel-control-prev,
+#carouselExampleControls .carousel-control-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8%;
+}
+
+#carouselExampleControls .carousel-control-prev:hover,
+#carouselExampleControls .carousel-control-next:hover {
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* .testimonials:before,
@@ -1234,17 +1312,24 @@ a.pre-order-light:hover {
   }
   .testimonials {
     height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  .test-slide {
-    display: flex !important;
-    align-items: center;
-    flex-direction: column;
   }
 
   .pkd-2 {
     padding: 6em 2em;
+  }
+
+  #carouselExampleControls .carousel-item-container {
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  #carouselExampleControls .carousel-item img.testimonal-img {
+    width: 100%;
+  }
+  #carouselExampleControls .carousel-item .carousel-quote {
+    width: 100%;
+    font-size: 8px;
+    min-height: 375px;
   }
 
   .pkd-2 .pre-order-row {

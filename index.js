@@ -27,8 +27,6 @@
     const introHeight = introDiv.scrollHeight * .65;
 
 
-
-
     const background = gsap.timeline();
 
     to('.background-radiant', {

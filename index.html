@@ -344,39 +344,94 @@
     </div>
   </div>
   <div class="testimonials">
-    <div class="slider">
-      <div class="test-slide">
-        <div class="test-img">
-          <img src="img/testimonals/pm-modi.jpg" alt="" />
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-item-container">
+            <img class="testimonal-img" src="img/testimonals/pm-modi.jpg" alt="...">
+            <div class="carousel-quote">
+              <p>
+                "The endeavour by Shri Rakeshji to present the essence of Atmasiddhi
+                Shastra in a lucid manner through its commentary in English is a
+                thoughtful gesture, aimed at the spiritual welfare of the youth."
+              </p>
+              <img
+                src="https://atmasiddhi.srmd.org/wp-content/uploads/2021/09/Motif-XS.png"
+                class="carousel-quote-motif"
+              />
+              <p class="carousel-person">-Shri Narendra Modi</p>
+              <p class="carousel-title">Hon. Prime Minister of India</p>
+            </div>
+          </div>
         </div>
-        <blockquote class="quote-card">
-          <p>
-            “The endeavour by Shri Rakeshji to present the essence of Atmasiddhi
-            Shastra in a lucid manner through its commentary in English is a
-            thoughtful gesture, aimed at the spiritual welfare of the youth.”
-          </p>
-
-          <cite> -Hon. Prime Minister of India, SHRI NARENDRA MODI </cite>
-        </blockquote>
+        <div class="carousel-item">
+          <div class="carousel-item-container">
+            <img  class="testimonal-img" src="img/testimonals/dalai-lama.jpg" alt="...">
+            <div class="carousel-quote">
+              <p>
+                "I am confident that this book kit by my spiritual brother 
+                Pujya Gurudevshri will be of great benefit to those wishing to 
+                understand and apply the deeper meaning of Jain philosophy."
+              </p>
+              <img
+                src="https://atmasiddhi.srmd.org/wp-content/uploads/2021/09/Motif-XS.png"
+                class="carousel-quote-motif"
+              />
+              <p class="carousel-person">-HIS HOLINESS THE DALAI LAMA </p>
+              <!-- <p class="carousel-title">Hon. Prime Minister of India</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-item-container">
+            <img  class="testimonal-img" src="img/testimonals/amish.jpg" alt="...">
+            <div class="carousel-quote">
+              <p>
+                "Atmasiddhi makes one ponder and walk the inner path. 
+                It has been my good fortune to be able to delve into this masterpiece. 
+                I would recommend it to you as well."
+              </p>
+              <img
+                src="https://atmasiddhi.srmd.org/wp-content/uploads/2021/09/Motif-XS.png"
+                class="carousel-quote-motif"
+              />
+              <p class="carousel-person">-AMISH TRIPATHI </p>
+              <p class="carousel-title">Author, Columnist & Diplomat</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-item-container">
+            <img  class="testimonal-img" src="img/testimonals/sri-sri.jpg" alt="...">
+            <div class="carousel-quote">
+              <p>
+                "I am pleased to see that the sublime essence of Shrimad Rajchandraji's 
+                Atmasiddhi Shastra is now available in a form that appeals to the modern 
+                generation. Shri Rakeshji’s innovative tribute to this 125-year old spiritual 
+                treasure is a laudable step to keep the light of eternal wisdom alive."
+              </p>
+              <img
+                src="https://atmasiddhi.srmd.org/wp-content/uploads/2021/09/Motif-XS.png"
+                class="carousel-quote-motif"
+              />
+              <p class="carousel-person">-SRI SRI RAVI SHANKAR </p>
+              <p class="carousel-title">Founder - Art of Living Foundation</p>
+            </div>
+            
+          </div>
+        </div>
       </div>
-      <div class="test-slide">
-             <div class = "test-img">
-                 <img src="https://https://d3p9vfk770tq8e.cloudfront.net/img/testimonals/dalai-lama.jpg" alt="">
-             </div>
-             <blockquote class="quote-card">
-                 <p>
-                     “I am confident that this book kit by my spiritual brother Pujya Gurudevshri will be of great benefit to those wishing to understand and apply the deeper meaning of Jain philosophy.”
-     
-     
-                 </p>
-             
-                 <cite>
-                     -HIS HOLINESS THE DALAI LAMA
-     
-                 </cite>
-             </blockquote>
-         </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+    
+    
   </div>
   <div class="pkd-2">
     <div class="container">
@@ -765,5 +820,7 @@
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
   ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
 </body>
