@@ -1318,21 +1318,47 @@ a.pre-order-light:hover {
 }
 
 .special-edition {
-  /* min-height: 550px; */
   background: var(--dark-brown);
 }
 
 #se-carousel .carousel-item {
   background: var(--dark-brown);
+  /* height: 500px; */
+  aspect-ratio: 19 / 7;
 }
 
-#se-carousel .carousel-item .carousel-item-container {
+#se-carousel .carousel-item-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;
+  height: 100%;
 }
 
-#se-carousel img.product-img {
+#se-carousel .carousel-item-container.special-edition {
+  background: url("img/product-banners/special-edition-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#se-carousel .carousel-item-container.souvenir {
+  background: url("img/product-banners/souvenir-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#se-carousel .carousel-item-container.mini {
+  background: url("img/product-banners/mini-book-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#se-carousel .carousel-item-container.limited-edition {
+  background: url("img/product-banners/limited-edition-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#se-carousel .product-img {
   width: 55%;
   height: 100%;
   object-fit: cover;
@@ -1340,7 +1366,6 @@ a.pre-order-light:hover {
 
 #se-carousel .product-info {
   width: 45%;
-  height: 100%;
   text-align: center;
   font-family: var(--serif);
   font-size: 1em;
@@ -1405,9 +1430,65 @@ a.pre-order-light:hover {
     height: auto;
     min-height: 940px;
   }
+
+  #se-carousel .product-info .atmasiddhi-silver {
+    font-size: 1em;
+  }
+
+  #se-carousel .product-info .product-title {
+    font-size: 2em;
+  }
+
+  #se-carousel .product-info .product-title.mini,
+  #se-carousel .product-info .atmasiddhi-silver.mini {
+    -webkit-text-fill-color: var(--dark-gold-color);
+    color: var(--dark-gold-color);
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  #se-carousel .carousel-item {
+    background: var(--dark-brown);
+    /* height: 500px; */
+    aspect-ratio: 17 / 25;
+  }
+
+  #se-carousel .carousel-item-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+
+  #se-carousel .carousel-item-container.special-edition {
+    background: url("img/product-banners/mobile/special-edition.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #se-carousel .carousel-item-container.carousel-item-container.souvenir {
+    background: url("img/product-banners/mobile/souvenir.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #se-carousel .carousel-item-container.carousel-item-container.mini {
+    background: url("img/product-banners/mobile/miniature.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #se-carousel
+    .carousel-item-container.carousel-item-container.limited-edition {
+    background: url("img/product-banners/mobile/limited-edition.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #se-carousel .product-info {
+    width: 100%;
+  }
+
   .headers h2.intro-header {
     font-size: 4em;
     max-width: 80%;
