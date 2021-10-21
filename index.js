@@ -74,6 +74,16 @@
         }
     );
 
+    // var ua = navigator.userAgent.toLowerCase();
+    // if (ua.indexOf('safari') != -1) {
+    //     if (ua.indexOf('chrome') > -1) {
+    //         //alert("1") // Chrome
+    //     } else {
+    //         height
+    //         ${window.innerHeight * 9 / 16}px
+    //     }
+    // }
+
 
     // to('.intro-header.first', {
     //     yPercent: 100,

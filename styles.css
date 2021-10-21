@@ -1326,6 +1326,14 @@ a.pre-order-light:hover {
   aspect-ratio: 19 / 7;
 }
 
+@supports not (aspect-ratio: 19/7) {
+  #se-carousel .carousel-item {
+    background: var(--dark-brown);
+    /* height: 500px; */
+    height: 36vw;
+  }
+}
+
 #se-carousel .carousel-item-container {
   display: flex;
   flex-direction: row;
@@ -1450,6 +1458,14 @@ a.pre-order-light:hover {
     background: var(--dark-brown);
     /* height: 500px; */
     aspect-ratio: 17 / 25;
+  }
+
+  @supports not (aspect-ratio: 17/25) {
+    #se-carousel .carousel-item {
+      background: var(--dark-brown);
+      /* height: 500px; */
+      height: 147vw;
+    }
   }
 
   #se-carousel .carousel-item-container {
