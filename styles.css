@@ -706,6 +706,19 @@ h2.atmasiddhi-shastra {
   text-align: center;
 }
 
+.gold-gradient-font {
+  background: -webkit-repeating-linear-gradient(
+    180deg,
+    var(--beige) 0%,
+    #a87b32 10%,
+    var(--beige) 33%,
+    #a87b32 61%,
+    var(--beige) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h2.title {
   letter-spacing: 1.3px;
   font-family: var(--serif), serif;
@@ -1211,44 +1224,62 @@ a.pre-order-light:hover {
 
 .awards {
   width: 100%;
-  padding: 40px 0 0 0;
+  padding: 40px 0 60px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: var(--sans-serif);
-  background: var(--dark-brown);
+  /* background: var(--dark-brown); */
+  background: rgb(250, 247, 242);
+  background: radial-gradient(
+    circle,
+    rgba(250, 247, 242, 1) 24%,
+    rgba(229, 213, 200, 1) 100%
+  );
 }
 
-.awards-container {
+.awards-container,
+.num-one-container {
   display: flex;
   flex-direction: row;
+}
+
+.awards-container .amazon,
+.awards-container .neilson {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
 .awards-container .books-bestseller {
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .awards-container p {
   font-family: var(--sans-serif);
-  font-size: 1.4em;
+  font-size: 1.7em;
   font-weight: 500;
   /* color: var(--dark-gold-color); */
-  color: white;
+  color: var(--dark-brown);
 }
 
 .awards-container p.num-one {
   font-family: var(--serif);
-  font-size: 5em;
+  font-size: 6.5em;
   font-weight: 800;
 }
 
 .awards p.desc {
-  font-size: 1.7em;
+  font-size: 2em;
   font-weight: 500;
-  color: var(--beige);
-  padding-bottom: 40px;
+  color: var(--dark-brown);
+  padding-top: 15px;
+  text-align: center;
 }
 
 .ribbon-container {
@@ -1454,6 +1485,11 @@ a.pre-order-light:hover {
 }
 
 @media only screen and (max-width: 768px) {
+  .awards .awards-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   #se-carousel .carousel-item {
     background: var(--dark-brown);
     /* height: 500px; */
